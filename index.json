@@ -1,0 +1,157 @@
+{
+  "api/Microsoft.Extensions.Configuration.html": {
+    "href": "api/Microsoft.Extensions.Configuration.html",
+    "title": "Namespace Microsoft.Extensions.Configuration | TrueLayer.NET Documentation",
+    "keywords": "Namespace Microsoft.Extensions.Configuration Classes TrueLayerOptionsExtensions TrueLayer SDK extensions for ."
+  },
+  "api/Microsoft.Extensions.Configuration.TrueLayerOptionsExtensions.html": {
+    "href": "api/Microsoft.Extensions.Configuration.TrueLayerOptionsExtensions.html",
+    "title": "Class TrueLayerOptionsExtensions | TrueLayer.NET Documentation",
+    "keywords": "Class TrueLayerOptionsExtensions TrueLayer SDK extensions for . Inheritance Object TrueLayerOptionsExtensions Namespace : Microsoft.Extensions.Configuration Assembly : TrueLayer.dll Syntax public static class TrueLayerOptionsExtensions : object Methods | Improve this Doc View Source GetTrueLayerOptions(IConfiguration, String) Gets the options from the \"TrueLayer\" configuration section needed to configure the TrueLayer.com SDK for .NET. Declaration public static TrueLayerOptions GetTrueLayerOptions(this IConfiguration configuration, string sectionName = \"TrueLayer\") Parameters Type Name Description IConfiguration configuration The configuration properties. String sectionName The section name from which to bind the configuration. Returns Type Description TrueLayerOptions The TrueLayer options initialized with values from the provided configuration."
+  },
+  "api/Microsoft.Extensions.DependencyInjection.html": {
+    "href": "api/Microsoft.Extensions.DependencyInjection.html",
+    "title": "Namespace Microsoft.Extensions.DependencyInjection | TrueLayer.NET Documentation",
+    "keywords": "Namespace Microsoft.Extensions.DependencyInjection Classes TrueLayerServiceCollectionExtensions This class adds extension methods to IServiceCollection making it easier to add the TrueLayer client to the NET Core dependency injection framework."
+  },
+  "api/Microsoft.Extensions.DependencyInjection.TrueLayerServiceCollectionExtensions.html": {
+    "href": "api/Microsoft.Extensions.DependencyInjection.TrueLayerServiceCollectionExtensions.html",
+    "title": "Class TrueLayerServiceCollectionExtensions | TrueLayer.NET Documentation",
+    "keywords": "Class TrueLayerServiceCollectionExtensions This class adds extension methods to IServiceCollection making it easier to add the TrueLayer client to the NET Core dependency injection framework. Inheritance Object TrueLayerServiceCollectionExtensions Namespace : Microsoft.Extensions.DependencyInjection Assembly : TrueLayer.dll Syntax public static class TrueLayerServiceCollectionExtensions : object Methods | Improve this Doc View Source AddTrueLayer(IServiceCollection, IConfiguration, Nullable<Action<TrueLayerOptions>>, Nullable<Action<IHttpClientBuilder>>) Registers the default TrueLayer SDK services to the provided services . Declaration public static IServiceCollection AddTrueLayer(this IServiceCollection services, IConfiguration configuration, Action<TrueLayerOptions>? configureOptions = null, Action<IHttpClientBuilder>? configureBuilder = null) Parameters Type Name Description IServiceCollection services The service collection to add to. IConfiguration configuration The Microsoft configuration used to obtain the TrueLayer SDK configuration. Nullable < Action < TrueLayerOptions >> configureOptions Action to customise the TrueLayer options created from configuration. Nullable < Action < IHttpClientBuilder >> configureBuilder Action to override the HttpClientBuilder. Returns Type Description IServiceCollection The service collection with registered TrueLayer SDK services. | Improve this Doc View Source AddTrueLayer(IServiceCollection, TrueLayerOptions, Nullable<Action<IHttpClientBuilder>>) Registers the default TrueLayer SDK services to the provided services . Declaration public static IServiceCollection AddTrueLayer(this IServiceCollection services, TrueLayerOptions options, Action<IHttpClientBuilder>? configureBuilder = null) Parameters Type Name Description IServiceCollection services The service collection to add to. TrueLayerOptions options The TrueLayer options. Nullable < Action < IHttpClientBuilder >> configureBuilder Action to override the HttpClientBuilder. Returns Type Description IServiceCollection The service collection with registered TrueLayer SDK services."
+  },
+  "api/TrueLayer.ApiOptions.html": {
+    "href": "api/TrueLayer.ApiOptions.html",
+    "title": "Class ApiOptions | TrueLayer.NET Documentation",
+    "keywords": "Class ApiOptions Inheritance Object ApiOptions PaymentsOptions Namespace : TrueLayer Assembly : TrueLayer.dll Syntax public class ApiOptions : object Properties | Improve this Doc View Source Uri Declaration public Uri? Uri { get; set; } Property Value Type Description Nullable < Uri > Methods | Improve this Doc View Source Validate() Declaration public virtual void Validate()"
+  },
+  "api/TrueLayer.ApiResponse.html": {
+    "href": "api/TrueLayer.ApiResponse.html",
+    "title": "Class ApiResponse | TrueLayer.NET Documentation",
+    "keywords": "Class ApiResponse Inheritance Object ApiResponse ApiResponse<TData> Namespace : TrueLayer Assembly : TrueLayer.dll Syntax public class ApiResponse : object Properties | Improve this Doc View Source IsSuccessful Declaration public virtual bool IsSuccessful { get; } Property Value Type Description Boolean | Improve this Doc View Source Problem Declaration public ProblemDetails? Problem { get; } Property Value Type Description Nullable < ProblemDetails > | Improve this Doc View Source StatusCode Declaration public HttpStatusCode StatusCode { get; } Property Value Type Description HttpStatusCode | Improve this Doc View Source TraceId Declaration public string? TraceId { get; } Property Value Type Description Nullable < String >"
+  },
+  "api/TrueLayer.ApiResponse-1.html": {
+    "href": "api/TrueLayer.ApiResponse-1.html",
+    "title": "Class ApiResponse<TData> | TrueLayer.NET Documentation",
+    "keywords": "Class ApiResponse<TData> Inheritance Object ApiResponse ApiResponse<TData> Inherited Members ApiResponse.StatusCode ApiResponse.TraceId ApiResponse.Problem Namespace : TrueLayer Assembly : TrueLayer.dll Syntax public class ApiResponse<TData> : ApiResponse Type Parameters Name Description TData Properties | Improve this Doc View Source Data Declaration public TData Data { get; } Property Value Type Description TData | Improve this Doc View Source IsSuccessful Declaration public override bool IsSuccessful { get; } Property Value Type Description Boolean Overrides ApiResponse.IsSuccessful Operators | Improve this Doc View Source Implicit(ApiResponse<TData> to TData) Declaration public static implicit operator TData(ApiResponse<TData> response) Parameters Type Name Description ApiResponse <TData> response Returns Type Description TData"
+  },
+  "api/TrueLayer.Auth.GetAuthTokenRequest.html": {
+    "href": "api/TrueLayer.Auth.GetAuthTokenRequest.html",
+    "title": "Class GetAuthTokenRequest | TrueLayer.NET Documentation",
+    "keywords": "Class GetAuthTokenRequest Inheritance Object GetAuthTokenRequest Namespace : TrueLayer.Auth Assembly : TrueLayer.dll Syntax public class GetAuthTokenRequest : object Constructors | Improve this Doc View Source GetAuthTokenRequest(String[]) Declaration public GetAuthTokenRequest(params string[] scopes) Parameters Type Name Description String [] scopes Properties | Improve this Doc View Source IsScoped Declaration public bool IsScoped { get; } Property Value Type Description Boolean | Improve this Doc View Source Scope Declaration public string? Scope { get; } Property Value Type Description Nullable < String >"
+  },
+  "api/TrueLayer.Auth.html": {
+    "href": "api/TrueLayer.Auth.html",
+    "title": "Namespace TrueLayer.Auth | TrueLayer.NET Documentation",
+    "keywords": "Namespace TrueLayer.Auth Classes GetAuthTokenRequest Interfaces IAuthApi"
+  },
+  "api/TrueLayer.Auth.IAuthApi.html": {
+    "href": "api/TrueLayer.Auth.IAuthApi.html",
+    "title": "Interface IAuthApi | TrueLayer.NET Documentation",
+    "keywords": "Interface IAuthApi Namespace : TrueLayer.Auth Assembly : TrueLayer.dll Syntax public interface IAuthApi Methods | Improve this Doc View Source GetAuthToken(GetAuthTokenRequest, CancellationToken) Declaration Task<ApiResponse<GetAuthTokenResponse>> GetAuthToken(GetAuthTokenRequest authTokenRequest, CancellationToken cancellationToken = null) Parameters Type Name Description GetAuthTokenRequest authTokenRequest CancellationToken cancellationToken Returns Type Description Task < ApiResponse < GetAuthTokenResponse >>"
+  },
+  "api/TrueLayer.Currencies.html": {
+    "href": "api/TrueLayer.Currencies.html",
+    "title": "Class Currencies | TrueLayer.NET Documentation",
+    "keywords": "Class Currencies Inheritance Object Currencies Namespace : TrueLayer Assembly : TrueLayer.dll Syntax public static class Currencies : object Fields | Improve this Doc View Source GBP Declaration public const string GBP = null Field Value Type Description String"
+  },
+  "api/TrueLayer.CustomerSegments.html": {
+    "href": "api/TrueLayer.CustomerSegments.html",
+    "title": "Class CustomerSegments | TrueLayer.NET Documentation",
+    "keywords": "Class CustomerSegments Inheritance Object CustomerSegments Namespace : TrueLayer Assembly : TrueLayer.dll Syntax public static class CustomerSegments : object Fields | Improve this Doc View Source Business Declaration public const string Business = null Field Value Type Description String | Improve this Doc View Source Corporate Declaration public const string Corporate = null Field Value Type Description String | Improve this Doc View Source Retail Declaration public const string Retail = null Field Value Type Description String"
+  },
+  "api/TrueLayer.html": {
+    "href": "api/TrueLayer.html",
+    "title": "Namespace TrueLayer | TrueLayer.NET Documentation",
+    "keywords": "Namespace TrueLayer Classes ApiOptions ApiResponse ApiResponse<TData> Currencies CustomerSegments ReleaseChannels SigningKey ES512 signing key used to sign API requests TrueLayerApiException Exception type for errors resulting from API operations. TrueLayerException Base class for exceptions thrown by the TrueLayer.com SDK for .NET. TrueLayerOptions Defines the options needed to configure the TrueLayer.com SDK for .NET that can be initialized using the Microsoft configuration framework. Interfaces ITrueLayerClient"
+  },
+  "api/TrueLayer.ITrueLayerClient.html": {
+    "href": "api/TrueLayer.ITrueLayerClient.html",
+    "title": "Interface ITrueLayerClient | TrueLayer.NET Documentation",
+    "keywords": "Interface ITrueLayerClient Namespace : TrueLayer Assembly : TrueLayer.dll Syntax public interface ITrueLayerClient Properties | Improve this Doc View Source Auth Declaration IAuthApi Auth { get; } Property Value Type Description IAuthApi | Improve this Doc View Source Payments Declaration IPaymentsApi Payments { get; } Property Value Type Description IPaymentsApi"
+  },
+  "api/TrueLayer.Payments.html": {
+    "href": "api/TrueLayer.Payments.html",
+    "title": "Namespace TrueLayer.Payments | TrueLayer.NET Documentation",
+    "keywords": "Namespace TrueLayer.Payments Classes PaymentsOptions Interfaces IPaymentsApi"
+  },
+  "api/TrueLayer.Payments.IPaymentsApi.html": {
+    "href": "api/TrueLayer.Payments.IPaymentsApi.html",
+    "title": "Interface IPaymentsApi | TrueLayer.NET Documentation",
+    "keywords": "Interface IPaymentsApi Namespace : TrueLayer.Payments Assembly : TrueLayer.dll Syntax public interface IPaymentsApi Methods | Improve this Doc View Source CreateHostedPaymentPageLink(String, String, Uri) Declaration string CreateHostedPaymentPageLink(string paymentId, string resourceToken, Uri returnUri) Parameters Type Name Description String paymentId String resourceToken Uri returnUri Returns Type Description String | Improve this Doc View Source CreatePayment(CreatePaymentRequest, String, CancellationToken) Declaration Task<ApiResponse<OneOf<CreatePaymentResponse.AuthorizationRequired>>> CreatePayment(CreatePaymentRequest paymentRequest, string idempotencyKey, CancellationToken cancellationToken = null) Parameters Type Name Description CreatePaymentRequest paymentRequest String idempotencyKey CancellationToken cancellationToken Returns Type Description Task < ApiResponse < OneOf < TrueLayer.Payments.Model.CreatePaymentResponse.AuthorizationRequired >>> | Improve this Doc View Source GetPayment(String, CancellationToken) Declaration Task<ApiResponse<OneOf<AuthorizationRequired, Authorizing, Authorized, AuthorizationFailed, Successful, Settled, Failed>>> GetPayment(string id, CancellationToken cancellationToken = null) Parameters Type Name Description String id CancellationToken cancellationToken Returns Type Description Task < ApiResponse < OneOf < AuthorizationRequired , Authorizing , Authorized , AuthorizationFailed , Successful , Settled , Failed >>>"
+  },
+  "api/TrueLayer.Payments.Model.Beneficiary.html": {
+    "href": "api/TrueLayer.Payments.Model.Beneficiary.html",
+    "title": "Class Beneficiary | TrueLayer.NET Documentation",
+    "keywords": "Class Beneficiary Inheritance Object Beneficiary Namespace : TrueLayer.Payments.Model Assembly : TrueLayer.dll Syntax public static class Beneficiary : object Constructors | Improve this Doc View Source Beneficiary(String) Creates a new MerchantAccount Declaration public Beneficiary(string id) Parameters Type Name Description String id Your TrueLayer merchant account identifier Fields | Improve this Doc View Source MerchantAccount Represents a TrueLayer beneficiary merchant account Declaration public record MerchantAccount Field Value Type Description record Properties | Improve this Doc View Source Id Gets the TrueLayer merchant account identifier Declaration public string Id { get; } Property Value Type Description String | Improve this Doc View Source Name The name of the beneficiary. If unspecified, the API will use the account owner name associated to the selected merchant account. Declaration public string? Name { get; } Property Value Type Description Nullable < String > | Improve this Doc View Source Type Declaration public string Type { get; } Property Value Type Description String"
+  },
+  "api/TrueLayer.Payments.Model.CreatePaymentRequest.html": {
+    "href": "api/TrueLayer.Payments.Model.CreatePaymentRequest.html",
+    "title": "Class CreatePaymentRequest | TrueLayer.NET Documentation",
+    "keywords": "Class CreatePaymentRequest Represents a request for payment Inheritance Object CreatePaymentRequest Namespace : TrueLayer.Payments.Model Assembly : TrueLayer.dll Syntax public class CreatePaymentRequest : object Constructors | Improve this Doc View Source CreatePaymentRequest(Int64, String, OneOf<BankTransfer>, OneOf<MerchantAccount, ExternalAccount>) Creates a new CreatePaymentRequest Declaration public CreatePaymentRequest(long amountInMinor, string currency, OneOf<BankTransfer> paymentMethod, OneOf<MerchantAccount, ExternalAccount> beneficiary) Parameters Type Name Description Int64 amountInMinor The payment amount in the minor currency unit String currency The three-letter ISO currency code OneOf < BankTransfer > paymentMethod The method of payment OneOf < MerchantAccount , ExternalAccount > beneficiary The payment beneficiary details Properties | Improve this Doc View Source AmountInMinor Gets the payment amount in the minor currency unit e.g. cents Declaration public long AmountInMinor { get; } Property Value Type Description Int64 | Improve this Doc View Source Beneficiary Gets the beneficiary details Declaration public OneOf<MerchantAccount, ExternalAccount> Beneficiary { get; } Property Value Type Description OneOf < MerchantAccount , ExternalAccount > | Improve this Doc View Source Currency Gets the three-letter ISO currency code Declaration public string Currency { get; } Property Value Type Description String | Improve this Doc View Source PaymentMethod Gets the method of payment Declaration public OneOf<BankTransfer> PaymentMethod { get; } Property Value Type Description OneOf < BankTransfer >"
+  },
+  "api/TrueLayer.Payments.Model.CreatePaymentResponse.html": {
+    "href": "api/TrueLayer.Payments.Model.CreatePaymentResponse.html",
+    "title": "Class CreatePaymentResponse | TrueLayer.NET Documentation",
+    "keywords": "Class CreatePaymentResponse Inheritance Object CreatePaymentResponse Namespace : TrueLayer.Payments.Model Assembly : TrueLayer.dll Syntax public static class CreatePaymentResponse : object Methods | Improve this Doc View Source AuthorizationRequired(String, Int64, String, String, DateTime, String) Declaration public record AuthorizationRequired(string Id, long AmountInMinor, string Currency, string Status, DateTime CreatedAt, string ResourceToken) Parameters Type Name Description String Id Int64 AmountInMinor String Currency String Status DateTime CreatedAt String ResourceToken Returns Type Description record"
+  },
+  "api/TrueLayer.Payments.Model.GetPaymentResponse.html": {
+    "href": "api/TrueLayer.Payments.Model.GetPaymentResponse.html",
+    "title": "Class GetPaymentResponse | TrueLayer.NET Documentation",
+    "keywords": "Class GetPaymentResponse Inheritance Object GetPaymentResponse Namespace : TrueLayer.Payments.Model Assembly : TrueLayer.dll Syntax public static class GetPaymentResponse : object Properties | Improve this Doc View Source AmountInMinor Declaration public long AmountInMinor { get; } Property Value Type Description Int64 | Improve this Doc View Source Beneficiary Declaration public OneOf<MerchantAccount, ExternalAccount> Beneficiary { get; } Property Value Type Description OneOf < MerchantAccount , ExternalAccount > | Improve this Doc View Source CreatedAt Declaration public DateTime CreatedAt { get; } Property Value Type Description DateTime | Improve this Doc View Source Currency Declaration public string Currency { get; } Property Value Type Description String | Improve this Doc View Source Id Declaration public string Id { get; } Property Value Type Description String | Improve this Doc View Source PaymentDetails Declaration public record PaymentDetails { } Property Value Type Description record | Improve this Doc View Source PaymentMethod Declaration public OneOf<BankTransfer> PaymentMethod { get; } Property Value Type Description OneOf < BankTransfer > | Improve this Doc View Source Status Declaration public string Status { get; } Property Value Type Description String"
+  },
+  "api/TrueLayer.Payments.Model.html": {
+    "href": "api/TrueLayer.Payments.Model.html",
+    "title": "Namespace TrueLayer.Payments.Model | TrueLayer.NET Documentation",
+    "keywords": "Namespace TrueLayer.Payments.Model Classes Beneficiary CreatePaymentRequest Represents a request for payment CreatePaymentResponse GetPaymentResponse PaymentMethod SchemeIdentifier SourceOfFunds"
+  },
+  "api/TrueLayer.Payments.Model.PaymentMethod.html": {
+    "href": "api/TrueLayer.Payments.Model.PaymentMethod.html",
+    "title": "Class PaymentMethod | TrueLayer.NET Documentation",
+    "keywords": "Class PaymentMethod Inheritance Object PaymentMethod Namespace : TrueLayer.Payments.Model Assembly : TrueLayer.dll Syntax public static class PaymentMethod : object Fields | Improve this Doc View Source BankTransfer Used to request payments via bank transfer Declaration public record BankTransfer Field Value Type Description record Properties | Improve this Doc View Source ProviderFilter Declaration public ProviderFilter? ProviderFilter { get; } Property Value Type Description Nullable < ProviderFilter > | Improve this Doc View Source StatementReference Declaration public string? StatementReference { get; } Property Value Type Description Nullable < String > | Improve this Doc View Source Type Declaration public string Type { get; } Property Value Type Description String"
+  },
+  "api/TrueLayer.Payments.Model.SchemeIdentifier.html": {
+    "href": "api/TrueLayer.Payments.Model.SchemeIdentifier.html",
+    "title": "Class SchemeIdentifier | TrueLayer.NET Documentation",
+    "keywords": "Class SchemeIdentifier Inheritance Object SchemeIdentifier Namespace : TrueLayer.Payments.Model Assembly : TrueLayer.dll Syntax public static class SchemeIdentifier : object Constructors | Improve this Doc View Source SchemeIdentifier(String, String) Declaration public SchemeIdentifier(string sortCode, string accountNumber) Parameters Type Name Description String sortCode String accountNumber Fields | Improve this Doc View Source Discriminator Declaration public const string Discriminator = null Field Value Type Description String | Improve this Doc View Source SortCodeAccountNumber Declaration public record SortCodeAccountNumber Field Value Type Description record Properties | Improve this Doc View Source AccountNumber Declaration public string AccountNumber { get; } Property Value Type Description String | Improve this Doc View Source SortCode Declaration public string SortCode { get; } Property Value Type Description String | Improve this Doc View Source Type Declaration public string Type { get; } Property Value Type Description String"
+  },
+  "api/TrueLayer.Payments.Model.SourceOfFunds.html": {
+    "href": "api/TrueLayer.Payments.Model.SourceOfFunds.html",
+    "title": "Class SourceOfFunds | TrueLayer.NET Documentation",
+    "keywords": "Class SourceOfFunds Inheritance Object SourceOfFunds Namespace : TrueLayer.Payments.Model Assembly : TrueLayer.dll Syntax public static class SourceOfFunds : object Fields | Improve this Doc View Source Discriminator Declaration public const string Discriminator = null Field Value Type Description String Properties | Improve this Doc View Source Type Declaration public string Type { get; } Property Value Type Description String Methods | Improve this Doc View Source ExternalAccount(OneOf<SchemeIdentifier.SortCodeAccountNumber, SchemeIdentifier.Bban, SchemeIdentifier.Iban, SchemeIdentifier.Nrb>[]) Declaration public sealed record ExternalAccount(OneOf<SchemeIdentifier.SortCodeAccountNumber, SchemeIdentifier.Bban, SchemeIdentifier.Iban, SchemeIdentifier.Nrb>[] SchemeIdentifiers) Parameters Type Name Description OneOf < SchemeIdentifier.SortCodeAccountNumber , TrueLayer.Payments.Model.SchemeIdentifier.Bban , TrueLayer.Payments.Model.SchemeIdentifier.Iban , TrueLayer.Payments.Model.SchemeIdentifier.Nrb >[] SchemeIdentifiers Returns Type Description record"
+  },
+  "api/TrueLayer.Payments.PaymentsOptions.html": {
+    "href": "api/TrueLayer.Payments.PaymentsOptions.html",
+    "title": "Class PaymentsOptions | TrueLayer.NET Documentation",
+    "keywords": "Class PaymentsOptions Inheritance Object ApiOptions PaymentsOptions Inherited Members ApiOptions.Uri Namespace : TrueLayer.Payments Assembly : TrueLayer.dll Syntax public class PaymentsOptions : ApiOptions Properties | Improve this Doc View Source HppUri Declaration public Uri? HppUri { get; set; } Property Value Type Description Nullable < Uri > | Improve this Doc View Source SigningKey Declaration public SigningKey SigningKey { get; set; } Property Value Type Description SigningKey Methods | Improve this Doc View Source Validate() Declaration public override void Validate() Overrides ApiOptions.Validate()"
+  },
+  "api/TrueLayer.ReleaseChannels.html": {
+    "href": "api/TrueLayer.ReleaseChannels.html",
+    "title": "Class ReleaseChannels | TrueLayer.NET Documentation",
+    "keywords": "Class ReleaseChannels Inheritance Object ReleaseChannels Namespace : TrueLayer Assembly : TrueLayer.dll Syntax public static class ReleaseChannels : object Fields | Improve this Doc View Source GeneralAvailability Declaration public const string GeneralAvailability = null Field Value Type Description String | Improve this Doc View Source PrivateBeta Declaration public const string PrivateBeta = null Field Value Type Description String | Improve this Doc View Source PublicBeta Declaration public const string PublicBeta = null Field Value Type Description String"
+  },
+  "api/TrueLayer.SigningKey.html": {
+    "href": "api/TrueLayer.SigningKey.html",
+    "title": "Class SigningKey | TrueLayer.NET Documentation",
+    "keywords": "Class SigningKey ES512 signing key used to sign API requests Inheritance Object SigningKey Namespace : TrueLayer Assembly : TrueLayer.dll Syntax public class SigningKey : object Constructors | Improve this Doc View Source SigningKey() Declaration public SigningKey() Properties | Improve this Doc View Source Certificate Sets the ES512 PEM certificate contents Declaration public string Certificate { set; } Property Value Type Description String | Improve this Doc View Source KeyId Gets the TrueLayer Key identifier available from the Console Declaration public string KeyId { get; set; } Property Value Type Description String"
+  },
+  "api/TrueLayer.TrueLayerApiException.html": {
+    "href": "api/TrueLayer.TrueLayerApiException.html",
+    "title": "Class TrueLayerApiException | TrueLayer.NET Documentation",
+    "keywords": "Class TrueLayerApiException Exception type for errors resulting from API operations. Inheritance Object TrueLayerException TrueLayerApiException Namespace : TrueLayer Assembly : TrueLayer.dll Syntax public class TrueLayerApiException : TrueLayerException Constructors | Improve this Doc View Source TrueLayerApiException(HttpStatusCode, Nullable<String>, Nullable<String>) Creates a new TrueLayerApiException instance. Declaration public TrueLayerApiException(HttpStatusCode httpStatusCode, string? traceId, string? additionalInformation = null) Parameters Type Name Description HttpStatusCode httpStatusCode The HTTP status code of the API response. Nullable < String > traceId The unique identifier of the API request. Nullable < String > additionalInformation Additional details about the error. Properties | Improve this Doc View Source HttpStatusCode Gets the HTTP status code of the API response. Declaration public HttpStatusCode HttpStatusCode { get; } Property Value Type Description HttpStatusCode | Improve this Doc View Source TraceId Gets the unique identifier of the API request. Declaration public string? TraceId { get; } Property Value Type Description Nullable < String >"
+  },
+  "api/TrueLayer.TrueLayerException.html": {
+    "href": "api/TrueLayer.TrueLayerException.html",
+    "title": "Class TrueLayerException | TrueLayer.NET Documentation",
+    "keywords": "Class TrueLayerException Base class for exceptions thrown by the TrueLayer.com SDK for .NET. Inheritance Object TrueLayerException TrueLayerApiException Namespace : TrueLayer Assembly : TrueLayer.dll Syntax public class TrueLayerException : Exception Constructors | Improve this Doc View Source TrueLayerException(String) Creates a new TrueLayerException instance with the provided message. Declaration public TrueLayerException(string message) Parameters Type Name Description String message The message that describes the error."
+  },
+  "api/TrueLayer.TrueLayerOptions.html": {
+    "href": "api/TrueLayer.TrueLayerOptions.html",
+    "title": "Class TrueLayerOptions | TrueLayer.NET Documentation",
+    "keywords": "Class TrueLayerOptions Defines the options needed to configure the TrueLayer.com SDK for .NET that can be initialized using the Microsoft configuration framework. Inheritance Object TrueLayerOptions Namespace : TrueLayer Assembly : TrueLayer.dll Syntax public class TrueLayerOptions : object Properties | Improve this Doc View Source Auth Declaration public ApiOptions Auth { get; set; } Property Value Type Description ApiOptions | Improve this Doc View Source ClientId Gets or sets your TrueLayer client id. Declaration public string? ClientId { get; } Property Value Type Description Nullable < String > | Improve this Doc View Source ClientSecret Gets or sets your TrueLayer client secret. Declaration public string? ClientSecret { get; } Property Value Type Description Nullable < String > | Improve this Doc View Source Payments Declaration public PaymentsOptions Payments { get; set; } Property Value Type Description PaymentsOptions | Improve this Doc View Source UseSandbox Gets or sets a value indicating whether to connect to the TrueLayer Sandbox. Declaration public bool? UseSandbox { get; } Property Value Type Description Nullable < Boolean > Methods | Improve this Doc View Source Validate() Declaration public void Validate()"
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "TrueLayer SDK | TrueLayer.NET Documentation",
+    "keywords": "TrueLayer SDK Getting Started TODO"
+  }
+}
