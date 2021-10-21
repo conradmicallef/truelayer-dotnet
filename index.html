@@ -1,13 +1,12 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>TrueLayer SDK | TrueLayer.NET Documentation </title>
+    <title>TrueLayer.NET | TrueLayer.NET Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="TrueLayer SDK | TrueLayer.NET Documentation ">
+    <meta name="title" content="TrueLayer.NET | TrueLayer.NET Documentation ">
     <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="favicon.ico">
@@ -20,7 +19,8 @@
     
     <meta property="docfx:rel" content="">
     
-  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -35,7 +35,7 @@
               </button>
               
               <a class="navbar-brand" href="index.html">
-                <img id="logo" class="svg" src="img/logo.svg" alt="">
+                <img id="logo" class="svg" src="https://truelayer-public-assets.s3-eu-west-1.amazonaws.com/logo/mark/tl-yellow.svg" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -70,14 +70,129 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="truelayer-sdk">TrueLayer SDK</h1>
+<h1 id="truelayernet">TrueLayer.NET</h1>
 
 <p><a href="https://www.nuget.org/packages/TrueLayer.Client"><img src="https://img.shields.io/nuget/v/TrueLayer.Client.svg" alt="NuGet"></a>
 <a href="https://www.nuget.org/packages/TrueLayer.Client"><img src="https://img.shields.io/nuget/vpre/TrueLayer.Client?label=Pre-release" alt="NuGet"></a>
 <a href="https://www.nuget.org/packages/TrueLayer.Client"><img src="https://img.shields.io/nuget/dt/TrueLayer.Client.svg" alt="NuGet"></a>
 <a href="https://truelayer.mit-license.org/"><img src="https://img.shields.io/:license-mit-blue.svg" alt="License"></a></p>
-<h2 id="getting-started">Getting Started</h2>
-<p>TODO</p>
+<h2 id="installation">Installation</h2>
+<p>Using the <a href="https://docs.microsoft.com/en-us/dotnet/core/tools/">.NET Core command-line interface (CLI) tools</a>:</p>
+<pre><code class="lang-sh">dotnet add package TrueLayer.Client
+</code></pre>
+<p>Using the <a href="https://docs.microsoft.com/en-us/nuget/tools/nuget-exe-cli-reference">NuGet Command Line Interface (CLI)</a></p>
+<pre><code class="lang-sh">nuget install TrueLayer.Client
+</code></pre>
+<p>Using the <a href="https://docs.microsoft.com/en-us/nuget/tools/package-manager-console">Package Manager Console</a>:</p>
+<pre><code class="lang-powershell">Install-Package TrueLayer.Client
+</code></pre>
+<p>From within Visual Studio:</p>
+<ol>
+<li>Open the Solution Explorer.</li>
+<li>Right-click on a project within your solution.</li>
+<li>Click on <em>Manage NuGet Packages...</em></li>
+<li>Click on the <em>Browse</em> tab and search for &quot;TrueLayer&quot;.</li>
+<li>Click on the <code>TrueLayer</code> package, select the appropriate version in the
+right-tab and click <em>Install</em>.</li>
+</ol>
+<h2 id="usage">Usage</h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>First <a href="https://console.truelayer.com/">sign up</a> for a developer account. Follow the instructions to set up a new application and obtain your Client ID and Secret.</p>
+<p>Next, generate a signing key pair used to sign API requests.</p>
+<p>To generate a private key, run:</p>
+<pre><code class="lang-sh">docker run --rm -v ${PWD}:/out -w /out -it alpine/openssl ecparam -genkey -name secp521r1 -noout -out ec512-private-key.pem
+</code></pre>
+<p>To obtain the public key, run:</p>
+<pre><code class="lang-sh">docker run --rm -v ${PWD}:/out -w /out -it alpine/openssl ec -in ec512-private-key.pem -pubout -out ec512-public-key.pem
+</code></pre>
+<p>Navigate to the Payments settings section of the TrueLayer console and upload your public key. Obtain the Key Id.</p>
+<h3 id="configure-settings">Configure Settings</h3>
+<p>Add your Client ID, Secret and Signing Key ID to <code>appsettings.json</code> or any other supported <a href="https://docs.microsoft.com/en-us/dotnet/core/extensions/configuration">configuration provider</a>.</p>
+<pre><code class="lang-json">{
+  &quot;TrueLayer&quot;: {
+    &quot;ClientId&quot;: &quot;your id&quot;,
+    &quot;ClientSecret&quot;: &quot;your secret&quot;,
+    &quot;UseSandbox&quot;: true,
+    &quot;Payments&quot;: {
+      &quot;SigningKey&quot;: {
+        &quot;KeyId&quot;: &quot;85eeb2da-702c-4f4b-bf9a-e98af5fd47c3&quot;
+      }
+    }
+  }
+}
+</code></pre>
+<h3 id="initialize-truelayernet">Initialize TrueLayer.NET</h3>
+<p>Register the TrueLayer client in <code>Startup.cs</code> or <code>Program.cs</code> (.NET 6.0):</p>
+<pre><code class="lang-c#">public IConfiguration Configuration { get; }
+
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddTrueLayer(configuration, options =&gt;
+    {
+        if (options.Payments?.SigningKey != null)
+        {
+            // For demo purposes only. Private key should be stored securely
+            options.Payments.SigningKey.Certificate = File.ReadAllText(&quot;ec512-private-key.pem&quot;);
+        }
+    });
+}
+</code></pre>
+<h3 id="make-a-payment">Make a payment</h3>
+<p>Inject <code>ITrueLayerClient</code> into your classes:</p>
+<pre><code class="lang-c#">public class MyService
+{
+    private readonly ITrueLayerClient _client;
+
+    public MyService(ITrueLayerClient client)
+    {
+        _client = client;
+    }
+
+    public async Task&lt;ActionResult&gt; MakePayment()
+    {
+        var paymentRequest = new CreatePaymentRequest(
+            100,
+            Currencies.GBP,
+            new PaymentMethod.BankTransfer
+            {
+                StatementReference = &quot;Your ref&quot;
+            },
+            new Beneficiary.ExternalAccount(
+                &quot;TrueLayer&quot;,
+                &quot;truelayer-dotnet&quot;,
+                new SchemeIdentifier.SortCodeAccountNumber(&quot;567890&quot;, &quot;12345678&quot;)
+            )
+        );
+
+        var apiResponse = await _client.Payments.CreatePayment(
+            paymentRequest, 
+            idempotencyKey: Guid.NewGuid().ToString()
+        );
+
+        if (!apiResponse.IsSuccessful)
+        {
+            return HandleFailure(
+                apiResponse.StatusCode,
+                // Includes details of any errors
+                apiResponse.Problem
+            )
+        }
+
+        // Pass the ResourceToken to the TrueLayer Web or Mobile SDK
+
+        // or, redirect to the TrueLayer Hosted Payment Page
+        string hostedPaymentPageUrl = apiResponse.Data.Match(
+            authRequired =&gt; _client.CreateHostedPaymentPageLink(
+                authRequired.Id, 
+                authRequired.ResourceToken, 
+                new Uri(&quot;https://redirect.yourdomain.com&quot;)
+            )
+        );
+
+        return Redirect(hostedPaymentPageUrl);
+    }
+}
+</code></pre>
 </article>
           </div>
           
@@ -86,7 +201,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/TrueLayer/truelayer-dotnet/blob/10810599b937112d4c7704f9f7d91d5fefab0b66/docs/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/TrueLayer/truelayer-dotnet/blob/main/docs/index.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
