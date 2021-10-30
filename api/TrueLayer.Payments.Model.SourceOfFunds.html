@@ -83,7 +83,8 @@
   
   <h1 id="TrueLayer_Payments_Model_SourceOfFunds" data-uid="TrueLayer.Payments.Model.SourceOfFunds" class="text-break">Class SourceOfFunds
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Source of funds types</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -103,7 +104,7 @@
     <a href="https://github.com/TrueLayer/truelayer-dotnet/new/main/apiSpec/new?filename=TrueLayer_Payments_Model_SourceOfFunds_Discriminator.md&amp;value=---%0Auid%3A%20TrueLayer.Payments.Model.SourceOfFunds.Discriminator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TrueLayer/truelayer-dotnet/blob/main/src/TrueLayer/Payments/Model/SourceOfFunds.cs/#L18">View Source</a>
+    <a href="https://github.com/TrueLayer/truelayer-dotnet/blob/main/src/TrueLayer/Payments/Model/SourceOfFunds.cs/#L25">View Source</a>
   </span>
   <h4 id="TrueLayer_Payments_Model_SourceOfFunds_Discriminator" data-uid="TrueLayer.Payments.Model.SourceOfFunds.Discriminator">Discriminator</h4>
   <div class="markdown level1 summary"></div>
@@ -131,14 +132,79 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/TrueLayer/truelayer-dotnet/new/main/apiSpec/new?filename=TrueLayer_Payments_Model_SourceOfFunds_AccountHolderName.md&amp;value=---%0Auid%3A%20TrueLayer.Payments.Model.SourceOfFunds.AccountHolderName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/TrueLayer/truelayer-dotnet/blob/main/src/TrueLayer/Payments/Model/SourceOfFunds.cs/#L44">View Source</a>
+  </span>
+  <a id="TrueLayer_Payments_Model_SourceOfFunds_AccountHolderName_" data-uid="TrueLayer.Payments.Model.SourceOfFunds.AccountHolderName*"></a>
+  <h4 id="TrueLayer_Payments_Model_SourceOfFunds_AccountHolderName" data-uid="TrueLayer.Payments.Model.SourceOfFunds.AccountHolderName">AccountHolderName</h4>
+  <div class="markdown level1 summary"><p>Gets the account holder name
+This field is null if the chosen payment method/destination does not provide this information.
+If the payment beneficiary is of type <a class="xref" href="TrueLayer.Payments.Model.Beneficiary.html#TrueLayer_Payments_Model_Beneficiary_MerchantAccount">MerchantAccount</a>, the account holder name is available once the payment is settled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? AccountHolderName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/TrueLayer/truelayer-dotnet/new/main/apiSpec/new?filename=TrueLayer_Payments_Model_SourceOfFunds_ExternalAccountId.md&amp;value=---%0Auid%3A%20TrueLayer.Payments.Model.SourceOfFunds.ExternalAccountId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/TrueLayer/truelayer-dotnet/blob/main/src/TrueLayer/Payments/Model/SourceOfFunds.cs/#L36">View Source</a>
+  </span>
+  <a id="TrueLayer_Payments_Model_SourceOfFunds_ExternalAccountId_" data-uid="TrueLayer.Payments.Model.SourceOfFunds.ExternalAccountId*"></a>
+  <h4 id="TrueLayer_Payments_Model_SourceOfFunds_ExternalAccountId" data-uid="TrueLayer.Payments.Model.SourceOfFunds.ExternalAccountId">ExternalAccountId</h4>
+  <div class="markdown level1 summary"><p>Gets the TrueLayer unique identifier of the external account</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? ExternalAccountId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/TrueLayer/truelayer-dotnet/new/main/apiSpec/new?filename=TrueLayer_Payments_Model_SourceOfFunds_Type.md&amp;value=---%0Auid%3A%20TrueLayer.Payments.Model.SourceOfFunds.Type%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TrueLayer/truelayer-dotnet/blob/main/src/TrueLayer/Payments/Model/SourceOfFunds.cs/#L19">View Source</a>
+    <a href="https://github.com/TrueLayer/truelayer-dotnet/blob/main/src/TrueLayer/Payments/Model/SourceOfFunds.cs/#L30">View Source</a>
   </span>
   <a id="TrueLayer_Payments_Model_SourceOfFunds_Type_" data-uid="TrueLayer.Payments.Model.SourceOfFunds.Type*"></a>
   <h4 id="TrueLayer_Payments_Model_SourceOfFunds_Type" data-uid="TrueLayer.Payments.Model.SourceOfFunds.Type">Type</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the source of funds type</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -166,11 +232,12 @@
     <a href="https://github.com/TrueLayer/truelayer-dotnet/new/main/apiSpec/new?filename=TrueLayer_Payments_Model_SourceOfFunds_ExternalAccount_OneOf_TrueLayer_Payments_Model_SchemeIdentifier_SortCodeAccountNumber_TrueLayer_Payments_Model_SchemeIdentifier_Bban_TrueLayer_Payments_Model_SchemeIdentifier_Iban_TrueLayer_Payments_Model_SchemeIdentifier_Nrb____.md&amp;value=---%0Auid%3A%20TrueLayer.Payments.Model.SourceOfFunds.ExternalAccount(OneOf%7BTrueLayer.Payments.Model.SchemeIdentifier.SortCodeAccountNumber%2CTrueLayer.Payments.Model.SchemeIdentifier.Bban%2CTrueLayer.Payments.Model.SchemeIdentifier.Iban%2CTrueLayer.Payments.Model.SchemeIdentifier.Nrb%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TrueLayer/truelayer-dotnet/blob/main/src/TrueLayer/Payments/Model/SourceOfFunds.cs/#L15">View Source</a>
+    <a href="https://github.com/TrueLayer/truelayer-dotnet/blob/main/src/TrueLayer/Payments/Model/SourceOfFunds.cs/#L22">View Source</a>
   </span>
   <a id="TrueLayer_Payments_Model_SourceOfFunds_ExternalAccount_" data-uid="TrueLayer.Payments.Model.SourceOfFunds.ExternalAccount*"></a>
   <h4 id="TrueLayer_Payments_Model_SourceOfFunds_ExternalAccount_OneOf_TrueLayer_Payments_Model_SchemeIdentifier_SortCodeAccountNumber_TrueLayer_Payments_Model_SchemeIdentifier_Bban_TrueLayer_Payments_Model_SchemeIdentifier_Iban_TrueLayer_Payments_Model_SchemeIdentifier_Nrb____" data-uid="TrueLayer.Payments.Model.SourceOfFunds.ExternalAccount(OneOf{TrueLayer.Payments.Model.SchemeIdentifier.SortCodeAccountNumber,TrueLayer.Payments.Model.SchemeIdentifier.Bban,TrueLayer.Payments.Model.SchemeIdentifier.Iban,TrueLayer.Payments.Model.SchemeIdentifier.Nrb}[])">ExternalAccount(OneOf&lt;SchemeIdentifier.SortCodeAccountNumber, SchemeIdentifier.Bban, SchemeIdentifier.Iban, SchemeIdentifier.Nrb&gt;[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Represents an external account source</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -189,7 +256,8 @@
       <tr>
         <td><span class="xref">OneOf</span>&lt;<a class="xref" href="TrueLayer.Payments.Model.SchemeIdentifier.html#TrueLayer_Payments_Model_SchemeIdentifier_SortCodeAccountNumber">SchemeIdentifier.SortCodeAccountNumber</a>, <span class="xref">TrueLayer.Payments.Model.SchemeIdentifier.Bban</span>, <span class="xref">TrueLayer.Payments.Model.SchemeIdentifier.Iban</span>, <span class="xref">TrueLayer.Payments.Model.SchemeIdentifier.Nrb</span>&gt;[]</td>
         <td><span class="parametername">SchemeIdentifiers</span></td>
-        <td></td>
+        <td><p>The scheme identifiers for the external account</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -219,7 +287,7 @@
                     <a href="https://github.com/TrueLayer/truelayer-dotnet/new/main/apiSpec/new?filename=TrueLayer_Payments_Model_SourceOfFunds.md&amp;value=---%0Auid%3A%20TrueLayer.Payments.Model.SourceOfFunds%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/TrueLayer/truelayer-dotnet/blob/main/src/TrueLayer/Payments/Model/SourceOfFunds.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/TrueLayer/truelayer-dotnet/blob/main/src/TrueLayer/Payments/Model/SourceOfFunds.cs/#L16" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -83,7 +83,8 @@
   
   <h1 id="TrueLayer_Payments_IPaymentsApi" data-uid="TrueLayer.Payments.IPaymentsApi" class="text-break">Interface IPaymentsApi
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Provides access to the TrueLayer Payments API</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="TrueLayer.Payments.html">TrueLayer.Payments</a></h6>
   <h6><strong>Assembly</strong>: TrueLayer.Client.dll</h6>
@@ -98,11 +99,12 @@
     <a href="https://github.com/TrueLayer/truelayer-dotnet/new/main/apiSpec/new?filename=TrueLayer_Payments_IPaymentsApi_CreateHostedPaymentPageLink_System_String_System_String_Uri_.md&amp;value=---%0Auid%3A%20TrueLayer.Payments.IPaymentsApi.CreateHostedPaymentPageLink(System.String%2CSystem.String%2CUri)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TrueLayer/truelayer-dotnet/blob/main/src/TrueLayer/Payments/IPaymentsApi.cs/#L28">View Source</a>
+    <a href="https://github.com/TrueLayer/truelayer-dotnet/blob/main/src/TrueLayer/Payments/IPaymentsApi.cs/#L56">View Source</a>
   </span>
   <a id="TrueLayer_Payments_IPaymentsApi_CreateHostedPaymentPageLink_" data-uid="TrueLayer.Payments.IPaymentsApi.CreateHostedPaymentPageLink*"></a>
   <h4 id="TrueLayer_Payments_IPaymentsApi_CreateHostedPaymentPageLink_System_String_System_String_Uri_" data-uid="TrueLayer.Payments.IPaymentsApi.CreateHostedPaymentPageLink(System.String,System.String,Uri)">CreateHostedPaymentPageLink(String, String, Uri)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Generates a link to the TrueLayer hosted payment page</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -121,17 +123,21 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">paymentId</span></td>
-        <td></td>
+        <td><p>The payment identifier</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">resourceToken</span></td>
-        <td></td>
+        <td><p>The payment resource token, returned from <a class="xref" href="TrueLayer.Payments.IPaymentsApi.html#TrueLayer_Payments_IPaymentsApi_CreatePayment_TrueLayer_Payments_Model_CreatePaymentRequest_System_String_CancellationToken_">CreatePayment(CreatePaymentRequest, String, CancellationToken)</a></p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">Uri</span></td>
         <td><span class="parametername">returnUri</span></td>
-        <td></td>
+        <td><p>Your return URI to which the end user will be redirected after the payment is completed.
+Note this should be configured in the TrueLayer console under your application settings.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -146,7 +152,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
+        <td><p>The HPP link you can redirect the end user to</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -155,11 +162,12 @@
     <a href="https://github.com/TrueLayer/truelayer-dotnet/new/main/apiSpec/new?filename=TrueLayer_Payments_IPaymentsApi_CreatePayment_TrueLayer_Payments_Model_CreatePaymentRequest_System_String_CancellationToken_.md&amp;value=---%0Auid%3A%20TrueLayer.Payments.IPaymentsApi.CreatePayment(TrueLayer.Payments.Model.CreatePaymentRequest%2CSystem.String%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TrueLayer/truelayer-dotnet/blob/main/src/TrueLayer/Payments/IPaymentsApi.cs/#L23">View Source</a>
+    <a href="https://github.com/TrueLayer/truelayer-dotnet/blob/main/src/TrueLayer/Payments/IPaymentsApi.cs/#L35">View Source</a>
   </span>
   <a id="TrueLayer_Payments_IPaymentsApi_CreatePayment_" data-uid="TrueLayer.Payments.IPaymentsApi.CreatePayment*"></a>
   <h4 id="TrueLayer_Payments_IPaymentsApi_CreatePayment_TrueLayer_Payments_Model_CreatePaymentRequest_System_String_CancellationToken_" data-uid="TrueLayer.Payments.IPaymentsApi.CreatePayment(TrueLayer.Payments.Model.CreatePaymentRequest,System.String,CancellationToken)">CreatePayment(CreatePaymentRequest, String, CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a new payment</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -178,17 +186,21 @@
       <tr>
         <td><a class="xref" href="TrueLayer.Payments.Model.CreatePaymentRequest.html">CreatePaymentRequest</a></td>
         <td><span class="parametername">paymentRequest</span></td>
-        <td></td>
+        <td><p>The payment request details</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">idempotencyKey</span></td>
-        <td></td>
+        <td><p>An idempotency key to allow safe retrying without the operation being performed multiple times.
+The value should be unique for each operation, e.g. a UUID, with the same key being sent on a retry of the same request.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
+        <td><p>The cancellation token to cancel the operation</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -203,7 +215,8 @@
     <tbody>
       <tr>
         <td><span class="xref">Task</span>&lt;<a class="xref" href="TrueLayer.ApiResponse-1.html">ApiResponse</a>&lt;<span class="xref">OneOf</span>&lt;<span class="xref">TrueLayer.Payments.Model.CreatePaymentResponse.AuthorizationRequired</span>&gt;&gt;&gt;</td>
-        <td></td>
+        <td><p>An API response that includes details of the created payment if successful, otherwise problem details</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -212,11 +225,12 @@
     <a href="https://github.com/TrueLayer/truelayer-dotnet/new/main/apiSpec/new?filename=TrueLayer_Payments_IPaymentsApi_GetPayment_System_String_CancellationToken_.md&amp;value=---%0Auid%3A%20TrueLayer.Payments.IPaymentsApi.GetPayment(System.String%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TrueLayer/truelayer-dotnet/blob/main/src/TrueLayer/Payments/IPaymentsApi.cs/#L26">View Source</a>
+    <a href="https://github.com/TrueLayer/truelayer-dotnet/blob/main/src/TrueLayer/Payments/IPaymentsApi.cs/#L44">View Source</a>
   </span>
   <a id="TrueLayer_Payments_IPaymentsApi_GetPayment_" data-uid="TrueLayer.Payments.IPaymentsApi.GetPayment*"></a>
   <h4 id="TrueLayer_Payments_IPaymentsApi_GetPayment_System_String_CancellationToken_" data-uid="TrueLayer.Payments.IPaymentsApi.GetPayment(System.String,CancellationToken)">GetPayment(String, CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the details of an existing payment</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -235,12 +249,14 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">id</span></td>
-        <td></td>
+        <td><p>The payment identifier</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
+        <td><p>The cancellation token to cancel the operation</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -255,7 +271,8 @@
     <tbody>
       <tr>
         <td><span class="xref">Task</span>&lt;<a class="xref" href="TrueLayer.ApiResponse-1.html">ApiResponse</a>&lt;<span class="xref">OneOf</span>&lt;<span class="xref">AuthorizationRequired</span>, <span class="xref">Authorizing</span>, <span class="xref">Authorized</span>, <span class="xref">AuthorizationFailed</span>, <span class="xref">Successful</span>, <span class="xref">Settled</span>, <span class="xref">Failed</span>&gt;&gt;&gt;</td>
-        <td></td>
+        <td><p>An API response that includes the payment details if successful, otherwise problem details</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -270,7 +287,7 @@
                     <a href="https://github.com/TrueLayer/truelayer-dotnet/new/main/apiSpec/new?filename=TrueLayer_Payments_IPaymentsApi.md&amp;value=---%0Auid%3A%20TrueLayer.Payments.IPaymentsApi%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/TrueLayer/truelayer-dotnet/blob/main/src/TrueLayer/Payments/IPaymentsApi.cs/#L21" class="contribution-link">View Source</a>
+                    <a href="https://github.com/TrueLayer/truelayer-dotnet/blob/main/src/TrueLayer/Payments/IPaymentsApi.cs/#L23" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

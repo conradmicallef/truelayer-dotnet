@@ -88,19 +88,6 @@ references:
   isSpec: "True"
   fullName: TrueLayer.ApiOptions.Uri
   nameWithType: ApiOptions.Uri
-- uid: TrueLayer.ApiOptions.Validate
-  name: Validate()
-  href: api/TrueLayer.ApiOptions.html#TrueLayer_ApiOptions_Validate
-  commentId: M:TrueLayer.ApiOptions.Validate
-  fullName: TrueLayer.ApiOptions.Validate()
-  nameWithType: ApiOptions.Validate()
-- uid: TrueLayer.ApiOptions.Validate*
-  name: Validate
-  href: api/TrueLayer.ApiOptions.html#TrueLayer_ApiOptions_Validate_
-  commentId: Overload:TrueLayer.ApiOptions.Validate
-  isSpec: "True"
-  fullName: TrueLayer.ApiOptions.Validate
-  nameWithType: ApiOptions.Validate
 - uid: TrueLayer.ApiResponse
   name: ApiResponse
   href: api/TrueLayer.ApiResponse.html
@@ -300,6 +287,12 @@ references:
   commentId: T:TrueLayer.Currencies
   fullName: TrueLayer.Currencies
   nameWithType: Currencies
+- uid: TrueLayer.Currencies.EUR
+  name: EUR
+  href: api/TrueLayer.Currencies.html#TrueLayer_Currencies_EUR
+  commentId: F:TrueLayer.Currencies.EUR
+  fullName: TrueLayer.Currencies.EUR
+  nameWithType: Currencies.EUR
 - uid: TrueLayer.Currencies.GBP
   name: GBP
   href: api/TrueLayer.Currencies.html#TrueLayer_Currencies_GBP
@@ -813,6 +806,19 @@ references:
   commentId: T:TrueLayer.Payments.Model.SourceOfFunds
   fullName: TrueLayer.Payments.Model.SourceOfFunds
   nameWithType: SourceOfFunds
+- uid: TrueLayer.Payments.Model.SourceOfFunds.AccountHolderName
+  name: AccountHolderName
+  href: api/TrueLayer.Payments.Model.SourceOfFunds.html#TrueLayer_Payments_Model_SourceOfFunds_AccountHolderName
+  commentId: P:TrueLayer.Payments.Model.SourceOfFunds.AccountHolderName
+  fullName: TrueLayer.Payments.Model.SourceOfFunds.AccountHolderName
+  nameWithType: SourceOfFunds.AccountHolderName
+- uid: TrueLayer.Payments.Model.SourceOfFunds.AccountHolderName*
+  name: AccountHolderName
+  href: api/TrueLayer.Payments.Model.SourceOfFunds.html#TrueLayer_Payments_Model_SourceOfFunds_AccountHolderName_
+  commentId: Overload:TrueLayer.Payments.Model.SourceOfFunds.AccountHolderName
+  isSpec: "True"
+  fullName: TrueLayer.Payments.Model.SourceOfFunds.AccountHolderName
+  nameWithType: SourceOfFunds.AccountHolderName
 - uid: TrueLayer.Payments.Model.SourceOfFunds.Discriminator
   name: Discriminator
   href: api/TrueLayer.Payments.Model.SourceOfFunds.html#TrueLayer_Payments_Model_SourceOfFunds_Discriminator
@@ -835,6 +841,19 @@ references:
   isSpec: "True"
   fullName: TrueLayer.Payments.Model.SourceOfFunds.ExternalAccount
   nameWithType: SourceOfFunds.ExternalAccount
+- uid: TrueLayer.Payments.Model.SourceOfFunds.ExternalAccountId
+  name: ExternalAccountId
+  href: api/TrueLayer.Payments.Model.SourceOfFunds.html#TrueLayer_Payments_Model_SourceOfFunds_ExternalAccountId
+  commentId: P:TrueLayer.Payments.Model.SourceOfFunds.ExternalAccountId
+  fullName: TrueLayer.Payments.Model.SourceOfFunds.ExternalAccountId
+  nameWithType: SourceOfFunds.ExternalAccountId
+- uid: TrueLayer.Payments.Model.SourceOfFunds.ExternalAccountId*
+  name: ExternalAccountId
+  href: api/TrueLayer.Payments.Model.SourceOfFunds.html#TrueLayer_Payments_Model_SourceOfFunds_ExternalAccountId_
+  commentId: Overload:TrueLayer.Payments.Model.SourceOfFunds.ExternalAccountId
+  isSpec: "True"
+  fullName: TrueLayer.Payments.Model.SourceOfFunds.ExternalAccountId
+  nameWithType: SourceOfFunds.ExternalAccountId
 - uid: TrueLayer.Payments.Model.SourceOfFunds.Type
   name: Type
   href: api/TrueLayer.Payments.Model.SourceOfFunds.html#TrueLayer_Payments_Model_SourceOfFunds_Type
@@ -880,19 +899,6 @@ references:
   isSpec: "True"
   fullName: TrueLayer.Payments.PaymentsOptions.SigningKey
   nameWithType: PaymentsOptions.SigningKey
-- uid: TrueLayer.Payments.PaymentsOptions.Validate
-  name: Validate()
-  href: api/TrueLayer.Payments.PaymentsOptions.html#TrueLayer_Payments_PaymentsOptions_Validate
-  commentId: M:TrueLayer.Payments.PaymentsOptions.Validate
-  fullName: TrueLayer.Payments.PaymentsOptions.Validate()
-  nameWithType: PaymentsOptions.Validate()
-- uid: TrueLayer.Payments.PaymentsOptions.Validate*
-  name: Validate
-  href: api/TrueLayer.Payments.PaymentsOptions.html#TrueLayer_Payments_PaymentsOptions_Validate_
-  commentId: Overload:TrueLayer.Payments.PaymentsOptions.Validate
-  isSpec: "True"
-  fullName: TrueLayer.Payments.PaymentsOptions.Validate
-  nameWithType: PaymentsOptions.Validate
 - uid: TrueLayer.ReleaseChannels
   name: ReleaseChannels
   href: api/TrueLayer.ReleaseChannels.html
@@ -936,19 +942,6 @@ references:
   isSpec: "True"
   fullName: TrueLayer.SigningKey.SigningKey
   nameWithType: SigningKey.SigningKey
-- uid: TrueLayer.SigningKey.Certificate
-  name: Certificate
-  href: api/TrueLayer.SigningKey.html#TrueLayer_SigningKey_Certificate
-  commentId: P:TrueLayer.SigningKey.Certificate
-  fullName: TrueLayer.SigningKey.Certificate
-  nameWithType: SigningKey.Certificate
-- uid: TrueLayer.SigningKey.Certificate*
-  name: Certificate
-  href: api/TrueLayer.SigningKey.html#TrueLayer_SigningKey_Certificate_
-  commentId: Overload:TrueLayer.SigningKey.Certificate
-  isSpec: "True"
-  fullName: TrueLayer.SigningKey.Certificate
-  nameWithType: SigningKey.Certificate
 - uid: TrueLayer.SigningKey.KeyId
   name: KeyId
   href: api/TrueLayer.SigningKey.html#TrueLayer_SigningKey_KeyId
@@ -962,6 +955,19 @@ references:
   isSpec: "True"
   fullName: TrueLayer.SigningKey.KeyId
   nameWithType: SigningKey.KeyId
+- uid: TrueLayer.SigningKey.PrivateKey
+  name: PrivateKey
+  href: api/TrueLayer.SigningKey.html#TrueLayer_SigningKey_PrivateKey
+  commentId: P:TrueLayer.SigningKey.PrivateKey
+  fullName: TrueLayer.SigningKey.PrivateKey
+  nameWithType: SigningKey.PrivateKey
+- uid: TrueLayer.SigningKey.PrivateKey*
+  name: PrivateKey
+  href: api/TrueLayer.SigningKey.html#TrueLayer_SigningKey_PrivateKey_
+  commentId: Overload:TrueLayer.SigningKey.PrivateKey
+  isSpec: "True"
+  fullName: TrueLayer.SigningKey.PrivateKey
+  nameWithType: SigningKey.PrivateKey
 - uid: TrueLayer.TrueLayerApiException
   name: TrueLayerApiException
   href: api/TrueLayer.TrueLayerApiException.html
