@@ -47,7 +47,7 @@
   "api/TrueLayer.Auth.IAuthApi.html": {
     "href": "api/TrueLayer.Auth.IAuthApi.html",
     "title": "Interface IAuthApi | TrueLayer.NET Documentation",
-    "keywords": "Interface IAuthApi Namespace : TrueLayer.Auth Assembly : TrueLayer.Client.dll Syntax public interface IAuthApi Methods | Improve this Doc View Source GetAuthToken(GetAuthTokenRequest, CancellationToken) Declaration Task<ApiResponse<GetAuthTokenResponse>> GetAuthToken(GetAuthTokenRequest authTokenRequest, CancellationToken cancellationToken = null) Parameters Type Name Description GetAuthTokenRequest authTokenRequest CancellationToken cancellationToken Returns Type Description Task < ApiResponse < GetAuthTokenResponse >>"
+    "keywords": "Interface IAuthApi Namespace : TrueLayer.Auth Assembly : TrueLayer.Client.dll Syntax public interface IAuthApi Methods | Improve this Doc View Source GetAuthToken(GetAuthTokenRequest, CancellationToken) Declaration ValueTask<ApiResponse<GetAuthTokenResponse>> GetAuthToken(GetAuthTokenRequest authTokenRequest, CancellationToken cancellationToken = null) Parameters Type Name Description GetAuthTokenRequest authTokenRequest CancellationToken cancellationToken Returns Type Description ValueTask < ApiResponse < GetAuthTokenResponse >>"
   },
   "api/TrueLayer.Currencies.html": {
     "href": "api/TrueLayer.Currencies.html",
