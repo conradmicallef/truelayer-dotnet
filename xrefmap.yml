@@ -1,31 +1,6 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
-- uid: Microsoft.Extensions.Configuration
-  name: Microsoft.Extensions.Configuration
-  href: api/Microsoft.Extensions.Configuration.html
-  commentId: N:Microsoft.Extensions.Configuration
-  fullName: Microsoft.Extensions.Configuration
-  nameWithType: Microsoft.Extensions.Configuration
-- uid: Microsoft.Extensions.Configuration.TrueLayerOptionsExtensions
-  name: TrueLayerOptionsExtensions
-  href: api/Microsoft.Extensions.Configuration.TrueLayerOptionsExtensions.html
-  commentId: T:Microsoft.Extensions.Configuration.TrueLayerOptionsExtensions
-  fullName: Microsoft.Extensions.Configuration.TrueLayerOptionsExtensions
-  nameWithType: TrueLayerOptionsExtensions
-- uid: Microsoft.Extensions.Configuration.TrueLayerOptionsExtensions.GetTrueLayerOptions(IConfiguration,System.String)
-  name: GetTrueLayerOptions(IConfiguration, String)
-  href: api/Microsoft.Extensions.Configuration.TrueLayerOptionsExtensions.html#Microsoft_Extensions_Configuration_TrueLayerOptionsExtensions_GetTrueLayerOptions_IConfiguration_System_String_
-  commentId: M:Microsoft.Extensions.Configuration.TrueLayerOptionsExtensions.GetTrueLayerOptions(IConfiguration,System.String)
-  fullName: Microsoft.Extensions.Configuration.TrueLayerOptionsExtensions.GetTrueLayerOptions(IConfiguration, System.String)
-  nameWithType: TrueLayerOptionsExtensions.GetTrueLayerOptions(IConfiguration, String)
-- uid: Microsoft.Extensions.Configuration.TrueLayerOptionsExtensions.GetTrueLayerOptions*
-  name: GetTrueLayerOptions
-  href: api/Microsoft.Extensions.Configuration.TrueLayerOptionsExtensions.html#Microsoft_Extensions_Configuration_TrueLayerOptionsExtensions_GetTrueLayerOptions_
-  commentId: Overload:Microsoft.Extensions.Configuration.TrueLayerOptionsExtensions.GetTrueLayerOptions
-  isSpec: "True"
-  fullName: Microsoft.Extensions.Configuration.TrueLayerOptionsExtensions.GetTrueLayerOptions
-  nameWithType: TrueLayerOptionsExtensions.GetTrueLayerOptions
 - uid: Microsoft.Extensions.DependencyInjection
   name: Microsoft.Extensions.DependencyInjection
   href: api/Microsoft.Extensions.DependencyInjection.html
@@ -38,24 +13,15 @@ references:
   commentId: T:Microsoft.Extensions.DependencyInjection.TrueLayerServiceCollectionExtensions
   fullName: Microsoft.Extensions.DependencyInjection.TrueLayerServiceCollectionExtensions
   nameWithType: TrueLayerServiceCollectionExtensions
-- uid: Microsoft.Extensions.DependencyInjection.TrueLayerServiceCollectionExtensions.AddTrueLayer(IServiceCollection,IConfiguration,System.Nullable{Action{TrueLayer.TrueLayerOptions}},System.Nullable{Action{IHttpClientBuilder}})
-  name: AddTrueLayer(IServiceCollection, IConfiguration, Nullable<Action<TrueLayerOptions>>, Nullable<Action<IHttpClientBuilder>>)
-  href: api/Microsoft.Extensions.DependencyInjection.TrueLayerServiceCollectionExtensions.html#Microsoft_Extensions_DependencyInjection_TrueLayerServiceCollectionExtensions_AddTrueLayer_IServiceCollection_IConfiguration_System_Nullable_Action_TrueLayer_TrueLayerOptions___System_Nullable_Action_IHttpClientBuilder___
-  commentId: M:Microsoft.Extensions.DependencyInjection.TrueLayerServiceCollectionExtensions.AddTrueLayer(IServiceCollection,IConfiguration,System.Nullable{Action{TrueLayer.TrueLayerOptions}},System.Nullable{Action{IHttpClientBuilder}})
-  name.vb: AddTrueLayer(IServiceCollection, IConfiguration, Nullable(Of Action(Of TrueLayerOptions)), Nullable(Of Action(Of IHttpClientBuilder)))
-  fullName: Microsoft.Extensions.DependencyInjection.TrueLayerServiceCollectionExtensions.AddTrueLayer(IServiceCollection, IConfiguration, System.Nullable<Action<TrueLayer.TrueLayerOptions>>, System.Nullable<Action<IHttpClientBuilder>>)
-  fullName.vb: Microsoft.Extensions.DependencyInjection.TrueLayerServiceCollectionExtensions.AddTrueLayer(IServiceCollection, IConfiguration, System.Nullable(Of Action(Of TrueLayer.TrueLayerOptions)), System.Nullable(Of Action(Of IHttpClientBuilder)))
-  nameWithType: TrueLayerServiceCollectionExtensions.AddTrueLayer(IServiceCollection, IConfiguration, Nullable<Action<TrueLayerOptions>>, Nullable<Action<IHttpClientBuilder>>)
-  nameWithType.vb: TrueLayerServiceCollectionExtensions.AddTrueLayer(IServiceCollection, IConfiguration, Nullable(Of Action(Of TrueLayerOptions)), Nullable(Of Action(Of IHttpClientBuilder)))
-- uid: Microsoft.Extensions.DependencyInjection.TrueLayerServiceCollectionExtensions.AddTrueLayer(IServiceCollection,TrueLayer.TrueLayerOptions,System.Nullable{Action{IHttpClientBuilder}})
-  name: AddTrueLayer(IServiceCollection, TrueLayerOptions, Nullable<Action<IHttpClientBuilder>>)
-  href: api/Microsoft.Extensions.DependencyInjection.TrueLayerServiceCollectionExtensions.html#Microsoft_Extensions_DependencyInjection_TrueLayerServiceCollectionExtensions_AddTrueLayer_IServiceCollection_TrueLayer_TrueLayerOptions_System_Nullable_Action_IHttpClientBuilder___
-  commentId: M:Microsoft.Extensions.DependencyInjection.TrueLayerServiceCollectionExtensions.AddTrueLayer(IServiceCollection,TrueLayer.TrueLayerOptions,System.Nullable{Action{IHttpClientBuilder}})
-  name.vb: AddTrueLayer(IServiceCollection, TrueLayerOptions, Nullable(Of Action(Of IHttpClientBuilder)))
-  fullName: Microsoft.Extensions.DependencyInjection.TrueLayerServiceCollectionExtensions.AddTrueLayer(IServiceCollection, TrueLayer.TrueLayerOptions, System.Nullable<Action<IHttpClientBuilder>>)
-  fullName.vb: Microsoft.Extensions.DependencyInjection.TrueLayerServiceCollectionExtensions.AddTrueLayer(IServiceCollection, TrueLayer.TrueLayerOptions, System.Nullable(Of Action(Of IHttpClientBuilder)))
-  nameWithType: TrueLayerServiceCollectionExtensions.AddTrueLayer(IServiceCollection, TrueLayerOptions, Nullable<Action<IHttpClientBuilder>>)
-  nameWithType.vb: TrueLayerServiceCollectionExtensions.AddTrueLayer(IServiceCollection, TrueLayerOptions, Nullable(Of Action(Of IHttpClientBuilder)))
+- uid: Microsoft.Extensions.DependencyInjection.TrueLayerServiceCollectionExtensions.AddTrueLayer(IServiceCollection,IConfiguration,System.Nullable{Action{TrueLayer.TrueLayerOptions}},System.Nullable{Action{IHttpClientBuilder}},System.String)
+  name: AddTrueLayer(IServiceCollection, IConfiguration, Nullable<Action<TrueLayerOptions>>, Nullable<Action<IHttpClientBuilder>>, String)
+  href: api/Microsoft.Extensions.DependencyInjection.TrueLayerServiceCollectionExtensions.html#Microsoft_Extensions_DependencyInjection_TrueLayerServiceCollectionExtensions_AddTrueLayer_IServiceCollection_IConfiguration_System_Nullable_Action_TrueLayer_TrueLayerOptions___System_Nullable_Action_IHttpClientBuilder___System_String_
+  commentId: M:Microsoft.Extensions.DependencyInjection.TrueLayerServiceCollectionExtensions.AddTrueLayer(IServiceCollection,IConfiguration,System.Nullable{Action{TrueLayer.TrueLayerOptions}},System.Nullable{Action{IHttpClientBuilder}},System.String)
+  name.vb: AddTrueLayer(IServiceCollection, IConfiguration, Nullable(Of Action(Of TrueLayerOptions)), Nullable(Of Action(Of IHttpClientBuilder)), String)
+  fullName: Microsoft.Extensions.DependencyInjection.TrueLayerServiceCollectionExtensions.AddTrueLayer(IServiceCollection, IConfiguration, System.Nullable<Action<TrueLayer.TrueLayerOptions>>, System.Nullable<Action<IHttpClientBuilder>>, System.String)
+  fullName.vb: Microsoft.Extensions.DependencyInjection.TrueLayerServiceCollectionExtensions.AddTrueLayer(IServiceCollection, IConfiguration, System.Nullable(Of Action(Of TrueLayer.TrueLayerOptions)), System.Nullable(Of Action(Of IHttpClientBuilder)), System.String)
+  nameWithType: TrueLayerServiceCollectionExtensions.AddTrueLayer(IServiceCollection, IConfiguration, Nullable<Action<TrueLayerOptions>>, Nullable<Action<IHttpClientBuilder>>, String)
+  nameWithType.vb: TrueLayerServiceCollectionExtensions.AddTrueLayer(IServiceCollection, IConfiguration, Nullable(Of Action(Of TrueLayerOptions)), Nullable(Of Action(Of IHttpClientBuilder)), String)
 - uid: Microsoft.Extensions.DependencyInjection.TrueLayerServiceCollectionExtensions.AddTrueLayer*
   name: AddTrueLayer
   href: api/Microsoft.Extensions.DependencyInjection.TrueLayerServiceCollectionExtensions.html#Microsoft_Extensions_DependencyInjection_TrueLayerServiceCollectionExtensions_AddTrueLayer_

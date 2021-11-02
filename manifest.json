@@ -37,35 +37,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/Microsoft.Extensions.Configuration.TrueLayerOptionsExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Microsoft.Extensions.Configuration.TrueLayerOptionsExtensions.html",
-          "hash": "m4Fs3tx+l7cDDvModDgMZw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Microsoft.Extensions.Configuration.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Microsoft.Extensions.Configuration.html",
-          "hash": "pMMBx43yENR4ciVXx1UBuw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "obj/api/Microsoft.Extensions.DependencyInjection.TrueLayerServiceCollectionExtensions.yml",
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.Extensions.DependencyInjection.TrueLayerServiceCollectionExtensions.html",
-          "hash": "uUWtTxe/NWSWHdcEc35yXw=="
+          "hash": "y3w2LZoUciqZCcm6mSJBYg=="
         }
       },
       "is_incremental": false,
@@ -89,7 +65,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TrueLayer.ApiOptions.html",
-          "hash": "t3B9HOzRf0fFsXJ8aHImMg=="
+          "hash": "GXesaGcqx37+wOx2nhcMUQ=="
         }
       },
       "is_incremental": false,
@@ -317,7 +293,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TrueLayer.Payments.PaymentsOptions.html",
-          "hash": "KDQimGlRFwGEUdhB9R/wxg=="
+          "hash": "BT+itZRUXUA2otzcPZ6+hg=="
         }
       },
       "is_incremental": false,
@@ -389,7 +365,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TrueLayer.TrueLayerOptions.html",
-          "hash": "umFSMa4/51DmZ1dRUfz5fw=="
+          "hash": "dEDFj11gnYk8aTujGMgi4w=="
         }
       },
       "is_incremental": false,
@@ -413,7 +389,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "qbVxhzRDxfkAxGaTT1cu1Q=="
+          "hash": "aVeKixMkJ9ce+Yput3B26g=="
         }
       },
       "is_incremental": false,
@@ -425,7 +401,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "XleU5bomjOxBGfEX9erImA=="
+          "hash": "o2WZJqhIOZ6SzTIqDJPJUg=="
         }
       },
       "is_incremental": false,
@@ -452,7 +428,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 31,
+          "total_file_count": 29,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
