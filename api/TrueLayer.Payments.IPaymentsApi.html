@@ -99,7 +99,7 @@
     <a href="https://github.com/TrueLayer/truelayer-dotnet/new/main/apiSpec/new?filename=TrueLayer_Payments_IPaymentsApi_CreateHostedPaymentPageLink_System_String_System_String_Uri_.md&amp;value=---%0Auid%3A%20TrueLayer.Payments.IPaymentsApi.CreateHostedPaymentPageLink(System.String%2CSystem.String%2CUri)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TrueLayer/truelayer-dotnet/blob/main/src/TrueLayer/Payments/IPaymentsApi.cs/#L56">View Source</a>
+    <a href="https://github.com/TrueLayer/truelayer-dotnet/blob/main/src/TrueLayer/Payments/IPaymentsApi.cs/#L55">View Source</a>
   </span>
   <a id="TrueLayer_Payments_IPaymentsApi_CreateHostedPaymentPageLink_" data-uid="TrueLayer.Payments.IPaymentsApi.CreateHostedPaymentPageLink*"></a>
   <h4 id="TrueLayer_Payments_IPaymentsApi_CreateHostedPaymentPageLink_System_String_System_String_Uri_" data-uid="TrueLayer.Payments.IPaymentsApi.CreateHostedPaymentPageLink(System.String,System.String,Uri)">CreateHostedPaymentPageLink(String, String, Uri)</h4>
@@ -162,7 +162,7 @@ Note this should be configured in the TrueLayer console under your application s
     <a href="https://github.com/TrueLayer/truelayer-dotnet/new/main/apiSpec/new?filename=TrueLayer_Payments_IPaymentsApi_CreatePayment_TrueLayer_Payments_Model_CreatePaymentRequest_System_String_CancellationToken_.md&amp;value=---%0Auid%3A%20TrueLayer.Payments.IPaymentsApi.CreatePayment(TrueLayer.Payments.Model.CreatePaymentRequest%2CSystem.String%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TrueLayer/truelayer-dotnet/blob/main/src/TrueLayer/Payments/IPaymentsApi.cs/#L35">View Source</a>
+    <a href="https://github.com/TrueLayer/truelayer-dotnet/blob/main/src/TrueLayer/Payments/IPaymentsApi.cs/#L34">View Source</a>
   </span>
   <a id="TrueLayer_Payments_IPaymentsApi_CreatePayment_" data-uid="TrueLayer.Payments.IPaymentsApi.CreatePayment*"></a>
   <h4 id="TrueLayer_Payments_IPaymentsApi_CreatePayment_TrueLayer_Payments_Model_CreatePaymentRequest_System_String_CancellationToken_" data-uid="TrueLayer.Payments.IPaymentsApi.CreatePayment(TrueLayer.Payments.Model.CreatePaymentRequest,System.String,CancellationToken)">CreatePayment(CreatePaymentRequest, String, CancellationToken)</h4>
@@ -225,7 +225,7 @@ The value should be unique for each operation, e.g. a UUID, with the same key be
     <a href="https://github.com/TrueLayer/truelayer-dotnet/new/main/apiSpec/new?filename=TrueLayer_Payments_IPaymentsApi_GetPayment_System_String_CancellationToken_.md&amp;value=---%0Auid%3A%20TrueLayer.Payments.IPaymentsApi.GetPayment(System.String%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TrueLayer/truelayer-dotnet/blob/main/src/TrueLayer/Payments/IPaymentsApi.cs/#L44">View Source</a>
+    <a href="https://github.com/TrueLayer/truelayer-dotnet/blob/main/src/TrueLayer/Payments/IPaymentsApi.cs/#L43">View Source</a>
   </span>
   <a id="TrueLayer_Payments_IPaymentsApi_GetPayment_" data-uid="TrueLayer.Payments.IPaymentsApi.GetPayment*"></a>
   <h4 id="TrueLayer_Payments_IPaymentsApi_GetPayment_System_String_CancellationToken_" data-uid="TrueLayer.Payments.IPaymentsApi.GetPayment(System.String,CancellationToken)">GetPayment(String, CancellationToken)</h4>
@@ -234,7 +234,7 @@ The value should be unique for each operation, e.g. a UUID, with the same key be
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;ApiResponse&lt;OneOf&lt;AuthorizationRequired, Authorizing, Authorized, AuthorizationFailed, Successful, Settled, Failed&gt;&gt;&gt; GetPayment(string id, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;ApiResponse&lt;OneOf&lt;AuthorizationRequired, Authorizing, Authorized, Succeeded, Settled, Failed&gt;&gt;&gt; GetPayment(string id, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -270,7 +270,7 @@ The value should be unique for each operation, e.g. a UUID, with the same key be
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="TrueLayer.ApiResponse-1.html">ApiResponse</a>&lt;<span class="xref">OneOf</span>&lt;<span class="xref">AuthorizationRequired</span>, <span class="xref">Authorizing</span>, <span class="xref">Authorized</span>, <span class="xref">AuthorizationFailed</span>, <span class="xref">Successful</span>, <span class="xref">Settled</span>, <span class="xref">Failed</span>&gt;&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="TrueLayer.ApiResponse-1.html">ApiResponse</a>&lt;<span class="xref">OneOf</span>&lt;<span class="xref">AuthorizationRequired</span>, <span class="xref">Authorizing</span>, <span class="xref">Authorized</span>, <span class="xref">Succeeded</span>, <span class="xref">Settled</span>, <span class="xref">Failed</span>&gt;&gt;&gt;</td>
         <td><p>An API response that includes the payment details if successful, otherwise problem details</p>
 </td>
       </tr>
@@ -287,7 +287,7 @@ The value should be unique for each operation, e.g. a UUID, with the same key be
                     <a href="https://github.com/TrueLayer/truelayer-dotnet/new/main/apiSpec/new?filename=TrueLayer_Payments_IPaymentsApi.md&amp;value=---%0Auid%3A%20TrueLayer.Payments.IPaymentsApi%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/TrueLayer/truelayer-dotnet/blob/main/src/TrueLayer/Payments/IPaymentsApi.cs/#L23" class="contribution-link">View Source</a>
+                    <a href="https://github.com/TrueLayer/truelayer-dotnet/blob/main/src/TrueLayer/Payments/IPaymentsApi.cs/#L22" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
