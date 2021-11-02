@@ -151,17 +151,18 @@ public void ConfigureServices(IServiceCollection services)
     public async Task&lt;ActionResult&gt; MakePayment()
     {
         var paymentRequest = new CreatePaymentRequest(
-            100,
-            Currencies.GBP,
-            new PaymentMethod.BankTransfer
+            amountInMinor: 100,
+            currency: Currencies.GBP,
+            paymentMethod: new PaymentMethod.BankTransfer
             {
                 StatementReference = &quot;Your ref&quot;
             },
-            new Beneficiary.ExternalAccount(
+            beneficiary: new Beneficiary.ExternalAccount(
                 &quot;TrueLayer&quot;,
                 &quot;truelayer-dotnet&quot;,
                 new SchemeIdentifier.SortCodeAccountNumber(&quot;567890&quot;, &quot;12345678&quot;)
-            )
+            ),
+            user: new PaymentUser.NewUser(&quot;Jane Doe&quot;, email: &quot;jane.doe@example.com&quot;, phone: &quot;0123456789&quot;)
         );
 
         var apiResponse = await _client.Payments.CreatePayment(
