@@ -308,6 +308,19 @@ references:
   isSpec: "True"
   fullName: TrueLayer.ITrueLayerClient.Auth
   nameWithType: ITrueLayerClient.Auth
+- uid: TrueLayer.ITrueLayerClient.MerchantAccounts
+  name: MerchantAccounts
+  href: api/TrueLayer.ITrueLayerClient.html#TrueLayer_ITrueLayerClient_MerchantAccounts
+  commentId: P:TrueLayer.ITrueLayerClient.MerchantAccounts
+  fullName: TrueLayer.ITrueLayerClient.MerchantAccounts
+  nameWithType: ITrueLayerClient.MerchantAccounts
+- uid: TrueLayer.ITrueLayerClient.MerchantAccounts*
+  name: MerchantAccounts
+  href: api/TrueLayer.ITrueLayerClient.html#TrueLayer_ITrueLayerClient_MerchantAccounts_
+  commentId: Overload:TrueLayer.ITrueLayerClient.MerchantAccounts
+  isSpec: "True"
+  fullName: TrueLayer.ITrueLayerClient.MerchantAccounts
+  nameWithType: ITrueLayerClient.MerchantAccounts
 - uid: TrueLayer.ITrueLayerClient.Payments
   name: Payments
   href: api/TrueLayer.ITrueLayerClient.html#TrueLayer_ITrueLayerClient_Payments
@@ -321,6 +334,44 @@ references:
   isSpec: "True"
   fullName: TrueLayer.ITrueLayerClient.Payments
   nameWithType: ITrueLayerClient.Payments
+- uid: TrueLayer.MerchantAccounts
+  name: TrueLayer.MerchantAccounts
+  href: api/TrueLayer.MerchantAccounts.html
+  commentId: N:TrueLayer.MerchantAccounts
+  fullName: TrueLayer.MerchantAccounts
+  nameWithType: TrueLayer.MerchantAccounts
+- uid: TrueLayer.MerchantAccounts.IMerchantAccountsApi
+  name: IMerchantAccountsApi
+  href: api/TrueLayer.MerchantAccounts.IMerchantAccountsApi.html
+  commentId: T:TrueLayer.MerchantAccounts.IMerchantAccountsApi
+  fullName: TrueLayer.MerchantAccounts.IMerchantAccountsApi
+  nameWithType: IMerchantAccountsApi
+- uid: TrueLayer.MerchantAccounts.IMerchantAccountsApi.GetMerchantAccount(System.String,CancellationToken)
+  name: GetMerchantAccount(String, CancellationToken)
+  href: api/TrueLayer.MerchantAccounts.IMerchantAccountsApi.html#TrueLayer_MerchantAccounts_IMerchantAccountsApi_GetMerchantAccount_System_String_CancellationToken_
+  commentId: M:TrueLayer.MerchantAccounts.IMerchantAccountsApi.GetMerchantAccount(System.String,CancellationToken)
+  fullName: TrueLayer.MerchantAccounts.IMerchantAccountsApi.GetMerchantAccount(System.String, CancellationToken)
+  nameWithType: IMerchantAccountsApi.GetMerchantAccount(String, CancellationToken)
+- uid: TrueLayer.MerchantAccounts.IMerchantAccountsApi.GetMerchantAccount*
+  name: GetMerchantAccount
+  href: api/TrueLayer.MerchantAccounts.IMerchantAccountsApi.html#TrueLayer_MerchantAccounts_IMerchantAccountsApi_GetMerchantAccount_
+  commentId: Overload:TrueLayer.MerchantAccounts.IMerchantAccountsApi.GetMerchantAccount
+  isSpec: "True"
+  fullName: TrueLayer.MerchantAccounts.IMerchantAccountsApi.GetMerchantAccount
+  nameWithType: IMerchantAccountsApi.GetMerchantAccount
+- uid: TrueLayer.MerchantAccounts.IMerchantAccountsApi.ListMerchantAccounts(CancellationToken)
+  name: ListMerchantAccounts(CancellationToken)
+  href: api/TrueLayer.MerchantAccounts.IMerchantAccountsApi.html#TrueLayer_MerchantAccounts_IMerchantAccountsApi_ListMerchantAccounts_CancellationToken_
+  commentId: M:TrueLayer.MerchantAccounts.IMerchantAccountsApi.ListMerchantAccounts(CancellationToken)
+  fullName: TrueLayer.MerchantAccounts.IMerchantAccountsApi.ListMerchantAccounts(CancellationToken)
+  nameWithType: IMerchantAccountsApi.ListMerchantAccounts(CancellationToken)
+- uid: TrueLayer.MerchantAccounts.IMerchantAccountsApi.ListMerchantAccounts*
+  name: ListMerchantAccounts
+  href: api/TrueLayer.MerchantAccounts.IMerchantAccountsApi.html#TrueLayer_MerchantAccounts_IMerchantAccountsApi_ListMerchantAccounts_
+  commentId: Overload:TrueLayer.MerchantAccounts.IMerchantAccountsApi.ListMerchantAccounts
+  isSpec: "True"
+  fullName: TrueLayer.MerchantAccounts.IMerchantAccountsApi.ListMerchantAccounts
+  nameWithType: IMerchantAccountsApi.ListMerchantAccounts
 - uid: TrueLayer.Payments
   name: TrueLayer.Payments
   href: api/TrueLayer.Payments.html

@@ -161,7 +161,31 @@
       "output": {
         ".html": {
           "relative_path": "api/TrueLayer.ITrueLayerClient.html",
-          "hash": "TcdWckXP+wSsgEtIea3zRw=="
+          "hash": "Ht8v5jIf+AdIgYYx4J0K/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/TrueLayer.MerchantAccounts.IMerchantAccountsApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TrueLayer.MerchantAccounts.IMerchantAccountsApi.html",
+          "hash": "r9M08yqN39MRjmXtZ8bH5g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/TrueLayer.MerchantAccounts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TrueLayer.MerchantAccounts.html",
+          "hash": "NOVyOLWrOGqtLrFfFgxEtg=="
         }
       },
       "is_incremental": false,
@@ -389,7 +413,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "aVeKixMkJ9ce+Yput3B26g=="
+          "hash": "OhOBs40iH7gZ/nALB82pRQ=="
         }
       },
       "is_incremental": false,
@@ -428,7 +452,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 29,
+          "total_file_count": 31,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

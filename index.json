@@ -57,7 +57,17 @@
   "api/TrueLayer.ITrueLayerClient.html": {
     "href": "api/TrueLayer.ITrueLayerClient.html",
     "title": "Interface ITrueLayerClient | TrueLayer.NET Documentation",
-    "keywords": "Interface ITrueLayerClient Provides access to TrueLayer APIs Namespace : TrueLayer Assembly : TrueLayer.Client.dll Syntax public interface ITrueLayerClient Properties | Improve this Doc View Source Auth Gets the Authorization API resource Declaration IAuthApi Auth { get; } Property Value Type Description IAuthApi | Improve this Doc View Source Payments Gets the Payments API resource Declaration IPaymentsApi Payments { get; } Property Value Type Description IPaymentsApi"
+    "keywords": "Interface ITrueLayerClient Provides access to TrueLayer APIs Namespace : TrueLayer Assembly : TrueLayer.Client.dll Syntax public interface ITrueLayerClient Properties | Improve this Doc View Source Auth Gets the Authorization API resource Declaration IAuthApi Auth { get; } Property Value Type Description IAuthApi | Improve this Doc View Source MerchantAccounts Gets the Merchant Accounts API resource Declaration IMerchantAccountsApi MerchantAccounts { get; } Property Value Type Description IMerchantAccountsApi | Improve this Doc View Source Payments Gets the Payments API resource Declaration IPaymentsApi Payments { get; } Property Value Type Description IPaymentsApi"
+  },
+  "api/TrueLayer.MerchantAccounts.html": {
+    "href": "api/TrueLayer.MerchantAccounts.html",
+    "title": "Namespace TrueLayer.MerchantAccounts | TrueLayer.NET Documentation",
+    "keywords": "Namespace TrueLayer.MerchantAccounts Interfaces IMerchantAccountsApi Provides access to the TrueLayer Merchant Accounts API"
+  },
+  "api/TrueLayer.MerchantAccounts.IMerchantAccountsApi.html": {
+    "href": "api/TrueLayer.MerchantAccounts.IMerchantAccountsApi.html",
+    "title": "Interface IMerchantAccountsApi | TrueLayer.NET Documentation",
+    "keywords": "Interface IMerchantAccountsApi Provides access to the TrueLayer Merchant Accounts API Namespace : TrueLayer.MerchantAccounts Assembly : TrueLayer.Client.dll Syntax public interface IMerchantAccountsApi Methods | Improve this Doc View Source GetMerchantAccount(String, CancellationToken) Get the details of a single merchant account. Declaration Task<ApiResponse<MerchantAccount>> GetMerchantAccount(string id, CancellationToken cancellationToken = null) Parameters Type Name Description String id The merchant account identifier. CancellationToken cancellationToken The cancellation token to cancel the operation. Returns Type Description Task < ApiResponse < MerchantAccount >> An API response that includes the merchant account details if successful, otherwise problem details. | Improve this Doc View Source ListMerchantAccounts(CancellationToken) List all your TrueLayer merchant accounts. There might be more than one account per currency. Declaration Task<ApiResponse<ResourceCollection<MerchantAccount>>> ListMerchantAccounts(CancellationToken cancellationToken = null) Parameters Type Name Description CancellationToken cancellationToken The cancellation token to cancel the operation. Returns Type Description Task < ApiResponse < ResourceCollection < MerchantAccount >>> An API response that includes a list of merchant accounts if successful, otherwise problem details."
   },
   "api/TrueLayer.Payments.html": {
     "href": "api/TrueLayer.Payments.html",
