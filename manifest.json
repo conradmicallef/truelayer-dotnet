@@ -145,6 +145,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/TrueLayer.CurrencyExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TrueLayer.CurrencyExtensions.html",
+          "hash": "I5rNNs08tT/X131GZKTJLA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/TrueLayer.CustomerSegments.yml",
       "output": {
         ".html": {
@@ -401,7 +413,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TrueLayer.html",
-          "hash": "UDemA6aBFBaqctplhp5+Gw=="
+          "hash": "g5mLNNOCYdqZgYHfh/XynA=="
         }
       },
       "is_incremental": false,
@@ -413,7 +425,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "OhOBs40iH7gZ/nALB82pRQ=="
+          "hash": "C+EDfC1wNZ5e12YLCsMhQQ=="
         }
       },
       "is_incremental": false,
@@ -452,7 +464,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 31,
+          "total_file_count": 32,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

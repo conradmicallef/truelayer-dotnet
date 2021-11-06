@@ -265,6 +265,38 @@ references:
   commentId: F:TrueLayer.Currencies.GBP
   fullName: TrueLayer.Currencies.GBP
   nameWithType: Currencies.GBP
+- uid: TrueLayer.CurrencyExtensions
+  name: CurrencyExtensions
+  href: api/TrueLayer.CurrencyExtensions.html
+  commentId: T:TrueLayer.CurrencyExtensions
+  fullName: TrueLayer.CurrencyExtensions
+  nameWithType: CurrencyExtensions
+- uid: TrueLayer.CurrencyExtensions.ToMajorCurrencyUnit(System.Int64,System.Int32)
+  name: ToMajorCurrencyUnit(Int64, Int32)
+  href: api/TrueLayer.CurrencyExtensions.html#TrueLayer_CurrencyExtensions_ToMajorCurrencyUnit_System_Int64_System_Int32_
+  commentId: M:TrueLayer.CurrencyExtensions.ToMajorCurrencyUnit(System.Int64,System.Int32)
+  fullName: TrueLayer.CurrencyExtensions.ToMajorCurrencyUnit(System.Int64, System.Int32)
+  nameWithType: CurrencyExtensions.ToMajorCurrencyUnit(Int64, Int32)
+- uid: TrueLayer.CurrencyExtensions.ToMajorCurrencyUnit*
+  name: ToMajorCurrencyUnit
+  href: api/TrueLayer.CurrencyExtensions.html#TrueLayer_CurrencyExtensions_ToMajorCurrencyUnit_
+  commentId: Overload:TrueLayer.CurrencyExtensions.ToMajorCurrencyUnit
+  isSpec: "True"
+  fullName: TrueLayer.CurrencyExtensions.ToMajorCurrencyUnit
+  nameWithType: CurrencyExtensions.ToMajorCurrencyUnit
+- uid: TrueLayer.CurrencyExtensions.ToMinorCurrencyUnit(System.Decimal,System.Int32)
+  name: ToMinorCurrencyUnit(Decimal, Int32)
+  href: api/TrueLayer.CurrencyExtensions.html#TrueLayer_CurrencyExtensions_ToMinorCurrencyUnit_System_Decimal_System_Int32_
+  commentId: M:TrueLayer.CurrencyExtensions.ToMinorCurrencyUnit(System.Decimal,System.Int32)
+  fullName: TrueLayer.CurrencyExtensions.ToMinorCurrencyUnit(System.Decimal, System.Int32)
+  nameWithType: CurrencyExtensions.ToMinorCurrencyUnit(Decimal, Int32)
+- uid: TrueLayer.CurrencyExtensions.ToMinorCurrencyUnit*
+  name: ToMinorCurrencyUnit
+  href: api/TrueLayer.CurrencyExtensions.html#TrueLayer_CurrencyExtensions_ToMinorCurrencyUnit_
+  commentId: Overload:TrueLayer.CurrencyExtensions.ToMinorCurrencyUnit
+  isSpec: "True"
+  fullName: TrueLayer.CurrencyExtensions.ToMinorCurrencyUnit
+  nameWithType: CurrencyExtensions.ToMinorCurrencyUnit
 - uid: TrueLayer.CustomerSegments
   name: CustomerSegments
   href: api/TrueLayer.CustomerSegments.html
