@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Net.Mime;
 using TrueLayer.Serialization;
 using System.Text.Json;
+using TrueLayer.Signing;
 #if NET5_0 || NET5_0_OR_GREATER
 using System.Net.Http.Json;
 #endif
@@ -149,16 +150,15 @@ namespace TrueLayer
             {
                 if (signingKey != null)
                 {
-                    // Only serialize to string if signing is required, 
+                    // Only serialize to string if signing is required,
                     string json = JsonSerializer.Serialize(request, request.GetType(), SerializerOptions.Default);
-                    
-                    signature = RequestSignature.Create(
-                        signingKey,
-                        httpMethod,
-                        uri,
-                        json,
-                        idempotencyKey
-                    );
+
+                    signature = Signer.SignWithPem(signingKey.KeyId, signingKey.PrivateKey)
+                        .Method(httpMethod.Method)
+                        .Path(uri.AbsolutePath.TrimEnd('/'))
+                        .Header(CustomHeaders.IdempotencyKey, idempotencyKey!)
+                        .Body(json)
+                        .Sign();
 
                     httpContent = new StringContent(json, Encoding.UTF8, MediaTypeNames.Application.Json);
                 }
@@ -211,7 +211,7 @@ namespace TrueLayer
             httpRequest.Headers.UserAgent.Add(UserAgentHeader);
 
             // HttpCompletionOption.ResponseHeadersRead reduces allocations by by avoiding the pre-buffering of the response content
-            // and allows us to access the content stream faster. 
+            // and allows us to access the content stream faster.
             // Doing so requires that always dispose of HttpResponseMessage to free up the connection
             // Ref: https://www.stevejgordon.co.uk/using-httpcompletionoption-responseheadersread-to-improve-httpclient-performance-dotnet
             return _httpClient.SendAsync(httpRequest, HttpCompletionOption.ResponseHeadersRead, cancellationToken);
