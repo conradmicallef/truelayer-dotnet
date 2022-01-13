@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface IPaymentsApi
    | TrueLayer.NET Documentation ">
-    <meta name="generator" content="docfx 2.56.6.0">
+    <meta name="generator" content="docfx 2.58.9.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -108,7 +108,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string CreateHostedPaymentPageLink(string paymentId, string resourceToken, Uri returnUri)</code></pre>
+    <pre><code class="lang-csharp hljs">string CreateHostedPaymentPageLink(string paymentId, string paymentToken, Uri returnUri)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -128,8 +128,8 @@
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">resourceToken</span></td>
-        <td><p>The payment resource token, returned from <a class="xref" href="TrueLayer.Payments.IPaymentsApi.html#TrueLayer_Payments_IPaymentsApi_CreatePayment_TrueLayer_Payments_Model_CreatePaymentRequest_System_String_CancellationToken_">CreatePayment(CreatePaymentRequest, String, CancellationToken)</a></p>
+        <td><span class="parametername">paymentToken</span></td>
+        <td><p>The payment token, returned from <a class="xref" href="TrueLayer.Payments.IPaymentsApi.html#TrueLayer_Payments_IPaymentsApi_CreatePayment_TrueLayer_Payments_Model_CreatePaymentRequest_System_String_CancellationToken_">CreatePayment(CreatePaymentRequest, String, CancellationToken)</a></p>
 </td>
       </tr>
       <tr>
@@ -171,7 +171,7 @@ Note this should be configured in the TrueLayer console under your application s
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;ApiResponse&lt;OneOf&lt;CreatePaymentResponse.AuthorizationRequired&gt;&gt;&gt; CreatePayment(CreatePaymentRequest paymentRequest, string idempotencyKey, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;ApiResponse&lt;CreatePaymentResponse&gt;&gt; CreatePayment(CreatePaymentRequest paymentRequest, string idempotencyKey, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -214,7 +214,7 @@ The value should be unique for each operation, e.g. a UUID, with the same key be
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="TrueLayer.ApiResponse-1.html">ApiResponse</a>&lt;<span class="xref">OneOf</span>&lt;<span class="xref">TrueLayer.Payments.Model.CreatePaymentResponse.AuthorizationRequired</span>&gt;&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="TrueLayer.ApiResponse-1.html">ApiResponse</a>&lt;<a class="xref" href="TrueLayer.Payments.Model.CreatePaymentResponse.html">CreatePaymentResponse</a>&gt;&gt;</td>
         <td><p>An API response that includes details of the created payment if successful, otherwise problem details</p>
 </td>
       </tr>
@@ -234,7 +234,7 @@ The value should be unique for each operation, e.g. a UUID, with the same key be
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;ApiResponse&lt;OneOf&lt;AuthorizationRequired, Authorizing, Authorized, Succeeded, Settled, Failed&gt;&gt;&gt; GetPayment(string id, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;ApiResponse&lt;OneOf&lt;GetPaymentResponse.AuthorizationRequired, GetPaymentResponse.Authorizing, GetPaymentResponse.Authorized, GetPaymentResponse.Executed, GetPaymentResponse.Settled, GetPaymentResponse.Failed&gt;&gt;&gt; GetPayment(string id, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -270,7 +270,7 @@ The value should be unique for each operation, e.g. a UUID, with the same key be
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="TrueLayer.ApiResponse-1.html">ApiResponse</a>&lt;<span class="xref">OneOf</span>&lt;<span class="xref">AuthorizationRequired</span>, <span class="xref">Authorizing</span>, <span class="xref">Authorized</span>, <span class="xref">Succeeded</span>, <span class="xref">Settled</span>, <span class="xref">Failed</span>&gt;&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="TrueLayer.ApiResponse-1.html">ApiResponse</a>&lt;<span class="xref">OneOf</span>&lt;<a class="xref" href="TrueLayer.Payments.Model.GetPaymentResponse.AuthorizationRequired.html">GetPaymentResponse.AuthorizationRequired</a>, <a class="xref" href="TrueLayer.Payments.Model.GetPaymentResponse.Authorizing.html">GetPaymentResponse.Authorizing</a>, <a class="xref" href="TrueLayer.Payments.Model.GetPaymentResponse.Authorized.html">GetPaymentResponse.Authorized</a>, <a class="xref" href="TrueLayer.Payments.Model.GetPaymentResponse.Executed.html">GetPaymentResponse.Executed</a>, <a class="xref" href="TrueLayer.Payments.Model.GetPaymentResponse.Settled.html">GetPaymentResponse.Settled</a>, <a class="xref" href="TrueLayer.Payments.Model.GetPaymentResponse.Failed.html">GetPaymentResponse.Failed</a>&gt;&gt;&gt;</td>
         <td><p>An API response that includes the payment details if successful, otherwise problem details</p>
 </td>
       </tr>

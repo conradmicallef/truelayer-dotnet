@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class CreatePaymentResponse
    | TrueLayer.NET Documentation ">
-    <meta name="generator" content="docfx 2.56.6.0">
+    <meta name="generator" content="docfx 2.58.9.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -83,7 +83,7 @@
   
   <h1 id="TrueLayer_Payments_Model_CreatePaymentResponse" data-uid="TrueLayer.Payments.Model.CreatePaymentResponse" class="text-break">Class CreatePaymentResponse
   </h1>
-  <div class="markdown level0 summary"><p>Create Payment Response types</p>
+  <div class="markdown level0 summary"><p>Create Payment Response type</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -91,29 +91,33 @@
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">CreatePaymentResponse</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="TrueLayer.Payments.Model.CreatePaymentResponse.html">CreatePaymentResponse</a>&gt;</div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="TrueLayer.Payments.Model.html">TrueLayer.Payments.Model</a></h6>
   <h6><strong>Assembly</strong>: TrueLayer.Client.dll</h6>
   <h5 id="TrueLayer_Payments_Model_CreatePaymentResponse_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class CreatePaymentResponse : object</code></pre>
+    <pre><code class="lang-csharp hljs">public class CreatePaymentResponse : object, IEquatable&lt;CreatePaymentResponse&gt;</code></pre>
   </div>
-  <h3 id="methods">Methods
+  <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/TrueLayer/truelayer-dotnet/new/main/apiSpec/new?filename=TrueLayer_Payments_Model_CreatePaymentResponse_AuthorizationRequired_System_String_System_Int64_System_String_System_String_DateTime_System_String_User_.md&amp;value=---%0Auid%3A%20TrueLayer.Payments.Model.CreatePaymentResponse.AuthorizationRequired(System.String%2CSystem.Int64%2CSystem.String%2CSystem.String%2CDateTime%2CSystem.String%2CUser)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/TrueLayer/truelayer-dotnet/new/main/apiSpec/new?filename=TrueLayer_Payments_Model_CreatePaymentResponse__ctor_System_String_System_String_TrueLayer_Payments_Model_PaymentUserResponse_.md&amp;value=---%0Auid%3A%20TrueLayer.Payments.Model.CreatePaymentResponse.%23ctor(System.String%2CSystem.String%2CTrueLayer.Payments.Model.PaymentUserResponse)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TrueLayer/truelayer-dotnet/blob/main/src/TrueLayer/Payments/Model/CreatePaymentResponse.cs/#L22">View Source</a>
+    <a href="https://github.com/TrueLayer/truelayer-dotnet/blob/main/src/TrueLayer/Payments/Model/CreatePaymentResponse.cs/#L13">View Source</a>
   </span>
-  <a id="TrueLayer_Payments_Model_CreatePaymentResponse_AuthorizationRequired_" data-uid="TrueLayer.Payments.Model.CreatePaymentResponse.AuthorizationRequired*"></a>
-  <h4 id="TrueLayer_Payments_Model_CreatePaymentResponse_AuthorizationRequired_System_String_System_Int64_System_String_System_String_DateTime_System_String_User_" data-uid="TrueLayer.Payments.Model.CreatePaymentResponse.AuthorizationRequired(System.String,System.Int64,System.String,System.String,DateTime,System.String,User)">AuthorizationRequired(String, Int64, String, String, DateTime, String, User)</h4>
-  <div class="markdown level1 summary"><p>Returned when a payment requires further authorization</p>
+  <a id="TrueLayer_Payments_Model_CreatePaymentResponse__ctor_" data-uid="TrueLayer.Payments.Model.CreatePaymentResponse.#ctor*"></a>
+  <h4 id="TrueLayer_Payments_Model_CreatePaymentResponse__ctor_System_String_System_String_TrueLayer_Payments_Model_PaymentUserResponse_" data-uid="TrueLayer.Payments.Model.CreatePaymentResponse.#ctor(System.String,System.String,TrueLayer.Payments.Model.PaymentUserResponse)">CreatePaymentResponse(String, String, PaymentUserResponse)</h4>
+  <div class="markdown level1 summary"><p>Create Payment Response type</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public record AuthorizationRequired(string Id, long AmountInMinor, string Currency, string Status, DateTime CreatedAt, string ResourceToken, User User)</code></pre>
+    <pre><code class="lang-csharp hljs">public CreatePaymentResponse(string Id, string PaymentToken, PaymentUserResponse User)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -132,44 +136,37 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
-        <td><span class="parametername">AmountInMinor</span></td>
-        <td><p>The payment amount in the minor currency unit e.g. cents</p>
-</td>
-      </tr>
-      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">Currency</span></td>
-        <td><p>The three-letter ISO alpha currency code</p>
+        <td><span class="parametername">PaymentToken</span></td>
+        <td><p>The token used to complete the payment via a front-end channel</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">Status</span></td>
-        <td><p>The status of the payment</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">DateTime</span></td>
-        <td><span class="parametername">CreatedAt</span></td>
-        <td><p>The data and time the payment was created</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">ResourceToken</span></td>
-        <td><p>The resource token used to complete the payment via a front-end channel</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">User</span></td>
+        <td><a class="xref" href="TrueLayer.Payments.Model.PaymentUserResponse.html">PaymentUserResponse</a></td>
         <td><span class="parametername">User</span></td>
         <td><p>The end user details</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 class="returns">Returns</h5>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/TrueLayer/truelayer-dotnet/new/main/apiSpec/new?filename=TrueLayer_Payments_Model_CreatePaymentResponse_Id.md&amp;value=---%0Auid%3A%20TrueLayer.Payments.Model.CreatePaymentResponse.Id%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/TrueLayer/truelayer-dotnet/blob/main/src/TrueLayer/Payments/Model/CreatePaymentResponse.cs/#L13">View Source</a>
+  </span>
+  <a id="TrueLayer_Payments_Model_CreatePaymentResponse_Id_" data-uid="TrueLayer.Payments.Model.CreatePaymentResponse.Id*"></a>
+  <h4 id="TrueLayer_Payments_Model_CreatePaymentResponse_Id" data-uid="TrueLayer.Payments.Model.CreatePaymentResponse.Id">Id</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Id { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -179,11 +176,75 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">record</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/TrueLayer/truelayer-dotnet/new/main/apiSpec/new?filename=TrueLayer_Payments_Model_CreatePaymentResponse_PaymentToken.md&amp;value=---%0Auid%3A%20TrueLayer.Payments.Model.CreatePaymentResponse.PaymentToken%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/TrueLayer/truelayer-dotnet/blob/main/src/TrueLayer/Payments/Model/CreatePaymentResponse.cs/#L13">View Source</a>
+  </span>
+  <a id="TrueLayer_Payments_Model_CreatePaymentResponse_PaymentToken_" data-uid="TrueLayer.Payments.Model.CreatePaymentResponse.PaymentToken*"></a>
+  <h4 id="TrueLayer_Payments_Model_CreatePaymentResponse_PaymentToken" data-uid="TrueLayer.Payments.Model.CreatePaymentResponse.PaymentToken">PaymentToken</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string PaymentToken { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/TrueLayer/truelayer-dotnet/new/main/apiSpec/new?filename=TrueLayer_Payments_Model_CreatePaymentResponse_User.md&amp;value=---%0Auid%3A%20TrueLayer.Payments.Model.CreatePaymentResponse.User%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/TrueLayer/truelayer-dotnet/blob/main/src/TrueLayer/Payments/Model/CreatePaymentResponse.cs/#L13">View Source</a>
+  </span>
+  <a id="TrueLayer_Payments_Model_CreatePaymentResponse_User_" data-uid="TrueLayer.Payments.Model.CreatePaymentResponse.User*"></a>
+  <h4 id="TrueLayer_Payments_Model_CreatePaymentResponse_User" data-uid="TrueLayer.Payments.Model.CreatePaymentResponse.User">User</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PaymentUserResponse User { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="TrueLayer.Payments.Model.PaymentUserResponse.html">PaymentUserResponse</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iequatable-1">System.IEquatable&lt;T&gt;</a>
+  </div>
 </article>
           </div>
           
@@ -195,7 +256,7 @@
                     <a href="https://github.com/TrueLayer/truelayer-dotnet/new/main/apiSpec/new?filename=TrueLayer_Payments_Model_CreatePaymentResponse.md&amp;value=---%0Auid%3A%20TrueLayer.Payments.Model.CreatePaymentResponse%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/TrueLayer/truelayer-dotnet/blob/main/src/TrueLayer/Payments/Model/CreatePaymentResponse.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/TrueLayer/truelayer-dotnet/blob/main/src/TrueLayer/Payments/Model/CreatePaymentResponse.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

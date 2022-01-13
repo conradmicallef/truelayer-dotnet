@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace TrueLayer.Payments.Model
    | TrueLayer.NET Documentation ">
-    <meta name="generator" content="docfx 2.56.6.0">
+    <meta name="generator" content="docfx 2.58.9.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -89,26 +89,87 @@
   </h3>
       <h4><a class="xref" href="TrueLayer.Payments.Model.Beneficiary.html">Beneficiary</a></h4>
       <section></section>
+      <h4><a class="xref" href="TrueLayer.Payments.Model.Beneficiary.ExternalAccount.html">Beneficiary.ExternalAccount</a></h4>
+      <section><p>Represents an external beneficiary account</p>
+</section>
+      <h4><a class="xref" href="TrueLayer.Payments.Model.Beneficiary.MerchantAccount.html">Beneficiary.MerchantAccount</a></h4>
+      <section><p>Represents a TrueLayer beneficiary merchant account</p>
+</section>
       <h4><a class="xref" href="TrueLayer.Payments.Model.CreatePaymentRequest.html">CreatePaymentRequest</a></h4>
       <section><p>Represents a request for payment</p>
 </section>
       <h4><a class="xref" href="TrueLayer.Payments.Model.CreatePaymentResponse.html">CreatePaymentResponse</a></h4>
-      <section><p>Create Payment Response types</p>
+      <section><p>Create Payment Response type</p>
 </section>
       <h4><a class="xref" href="TrueLayer.Payments.Model.GetPaymentResponse.html">GetPaymentResponse</a></h4>
       <section><p>Get Payment Response Types</p>
 </section>
+      <h4><a class="xref" href="TrueLayer.Payments.Model.GetPaymentResponse.AuthorizationRequired.html">GetPaymentResponse.AuthorizationRequired</a></h4>
+      <section><p>Represents a payment that requires further authorization</p>
+</section>
+      <h4><a class="xref" href="TrueLayer.Payments.Model.GetPaymentResponse.Authorized.html">GetPaymentResponse.Authorized</a></h4>
+      <section><p>Represents a payment that has been authorized by the end user</p>
+</section>
+      <h4><a class="xref" href="TrueLayer.Payments.Model.GetPaymentResponse.Authorizing.html">GetPaymentResponse.Authorizing</a></h4>
+      <section><p>Represents a payment that is being authorized</p>
+</section>
+      <h4><a class="xref" href="TrueLayer.Payments.Model.GetPaymentResponse.Executed.html">GetPaymentResponse.Executed</a></h4>
+      <section><p>Represents a payment that has been executed
+For open loop payments this state is terminate. For closed-loop payments, wait for Settled.</p>
+</section>
+      <h4><a class="xref" href="TrueLayer.Payments.Model.GetPaymentResponse.Failed.html">GetPaymentResponse.Failed</a></h4>
+      <section><p>Represents an authorized payment that failed to complete. This is a terminate state.</p>
+</section>
+      <h4><a class="xref" href="TrueLayer.Payments.Model.GetPaymentResponse.PaymentDetails.html">GetPaymentResponse.PaymentDetails</a></h4>
+      <section><p>Base class containing common properties for all payment states</p>
+</section>
+      <h4><a class="xref" href="TrueLayer.Payments.Model.GetPaymentResponse.Settled.html">GetPaymentResponse.Settled</a></h4>
+      <section><p>Represents a payment that has settled
+This is a terminate state for closed-loop payments.</p>
+</section>
       <h4><a class="xref" href="TrueLayer.Payments.Model.PaymentMethod.html">PaymentMethod</a></h4>
       <section><p>Payment Method types</p>
 </section>
-      <h4><a class="xref" href="TrueLayer.Payments.Model.PaymentUser.html">PaymentUser</a></h4>
+      <h4><a class="xref" href="TrueLayer.Payments.Model.PaymentMethod.BankTransfer.html">PaymentMethod.BankTransfer</a></h4>
+      <section><p>Defines a payment via Bank Transfer</p>
+</section>
+      <h4><a class="xref" href="TrueLayer.Payments.Model.PaymentUserRequest.html">PaymentUserRequest</a></h4>
       <section><p>Payment user types</p>
 </section>
+      <h4><a class="xref" href="TrueLayer.Payments.Model.PaymentUserRequest.ExistingUser.html">PaymentUserRequest.ExistingUser</a></h4>
+      <section><p>Represents an existing user</p>
+</section>
+      <h4><a class="xref" href="TrueLayer.Payments.Model.PaymentUserRequest.NewUser.html">PaymentUserRequest.NewUser</a></h4>
+      <section><p>Represents a new user</p>
+</section>
+      <h4><a class="xref" href="TrueLayer.Payments.Model.PaymentUserResponse.html">PaymentUserResponse</a></h4>
+      <section><p>Represents an end user that has been associated with a payment.</p>
+</section>
+      <h4><a class="xref" href="TrueLayer.Payments.Model.ProviderFilter.html">ProviderFilter</a></h4>
+      <section><p>Filter options for providers</p>
+</section>
+      <h4><a class="xref" href="TrueLayer.Payments.Model.ProviderFilter.ExcludesFilter.html">ProviderFilter.ExcludesFilter</a></h4>
+      <section></section>
       <h4><a class="xref" href="TrueLayer.Payments.Model.SchemeIdentifier.html">SchemeIdentifier</a></h4>
       <section><p>Scheme Identifier types</p>
 </section>
+      <h4><a class="xref" href="TrueLayer.Payments.Model.SchemeIdentifier.Bban.html">SchemeIdentifier.Bban</a></h4>
+      <section><p>Defines a bank account identified by a BBAN</p>
+</section>
+      <h4><a class="xref" href="TrueLayer.Payments.Model.SchemeIdentifier.Iban.html">SchemeIdentifier.Iban</a></h4>
+      <section><p>Defines a bank account identified by an IBAN</p>
+</section>
+      <h4><a class="xref" href="TrueLayer.Payments.Model.SchemeIdentifier.Nrb.html">SchemeIdentifier.Nrb</a></h4>
+      <section><p>Defines a bank account identified by a Polish NRB</p>
+</section>
+      <h4><a class="xref" href="TrueLayer.Payments.Model.SchemeIdentifier.SortCodeAccountNumber.html">SchemeIdentifier.SortCodeAccountNumber</a></h4>
+      <section><p>Defines a bank account identified by sort code and account number</p>
+</section>
       <h4><a class="xref" href="TrueLayer.Payments.Model.SourceOfFunds.html">SourceOfFunds</a></h4>
       <section><p>Source of funds types</p>
+</section>
+      <h4><a class="xref" href="TrueLayer.Payments.Model.SourceOfFunds.ExternalAccount.html">SourceOfFunds.ExternalAccount</a></h4>
+      <section><p>Represents an external account source</p>
 </section>
 </article>
           </div>
