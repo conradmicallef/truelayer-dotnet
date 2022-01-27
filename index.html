@@ -162,11 +162,11 @@ public void ConfigureServices(IServiceCollection services)
                 &quot;truelayer-dotnet&quot;,
                 new SchemeIdentifier.SortCodeAccountNumber(&quot;567890&quot;, &quot;12345678&quot;)
             ),
-            user: new PaymentUser.NewUser(&quot;Jane Doe&quot;, email: &quot;jane.doe@example.com&quot;, phone: &quot;0123456789&quot;)
+            user: new PaymentUserRequest(&quot;Jane Doe&quot;, &quot;jane.doe@example.com&quot;, &quot;0123456789&quot;)
         );
 
         var apiResponse = await _client.Payments.CreatePayment(
-            paymentRequest, 
+            paymentRequest,
             idempotencyKey: Guid.NewGuid().ToString()
         );
 
@@ -179,16 +179,13 @@ public void ConfigureServices(IServiceCollection services)
             )
         }
 
-        // Pass the ResourceToken to the TrueLayer Web or Mobile SDK
+        // Pass the PaymentToken to the TrueLayer Web or Mobile SDK
 
         // or, redirect to the TrueLayer Hosted Payment Page
-        string hostedPaymentPageUrl = apiResponse.Data.Match(
-            authRequired =&gt; _client.CreateHostedPaymentPageLink(
-                authRequired.Id, 
-                authRequired.ResourceToken, 
-                new Uri(&quot;https://redirect.yourdomain.com&quot;)
-            )
-        );
+        string hostedPaymentPageUrl = _client.Payments.CreateHostedPaymentPageLink(
+            apiResponse.Data!.Id,
+            apiResponse.Data!.PaymentToken,
+            new Uri(&quot;https://redirect.yourdomain.com&quot;));
 
         return Redirect(hostedPaymentPageUrl);
     }
