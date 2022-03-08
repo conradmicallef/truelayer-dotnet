@@ -65,7 +65,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TrueLayer.ApiOptions.html",
-          "hash": "pI68gNZTsgBqPolxywNCA70oLvcwwl+GIb0uEDJz5ZU="
+          "hash": "o5bQ1R7sYWaED0OKk89Cza2biilDqt86yUGqv2Eaj+0="
         }
       },
       "is_incremental": false,
@@ -77,7 +77,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TrueLayer.ApiResponse-1.html",
-          "hash": "3ByhEvo4nuO5/uOe/47V2bWzN/ttRuYjEqbaFYCof4w="
+          "hash": "VPoTP/m5rcouBQyhxXWj3B3eg11T4V9Qt/XR8xUaxT8="
         }
       },
       "is_incremental": false,
@@ -181,11 +181,35 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/TrueLayer.Extensions.UriExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TrueLayer.Extensions.UriExtensions.html",
+          "hash": "mfpV23jvPwBe8NK/khxAPQFonI0c/cfSFHU+lf8EzG4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/TrueLayer.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TrueLayer.Extensions.html",
+          "hash": "IIrV9eNg/aAYJ84EzJ2W+Njw36TT11+MmSn9a7AYUMk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/TrueLayer.ITrueLayerClient.yml",
       "output": {
         ".html": {
           "relative_path": "api/TrueLayer.ITrueLayerClient.html",
-          "hash": "SJoVloR/01lxjgUWvz7TMefNyh2aOLzBzFOc79A5Dsg="
+          "hash": "LHVquxbckTaaveDVEGp/b36N0wZknEbG6wuivgM2DE0="
         }
       },
       "is_incremental": false,
@@ -637,6 +661,210 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/TrueLayer.Payouts.IPayoutsApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TrueLayer.Payouts.IPayoutsApi.html",
+          "hash": "uhOBT03JQrr9ukGg0J4goOYubXCbT/ESicElN8vhaHw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/TrueLayer.Payouts.Model.AccountIdentifier.Iban.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TrueLayer.Payouts.Model.AccountIdentifier.Iban.html",
+          "hash": "WMBG+uD04FqguEi06A9vxAkAdeX8kLknzMj45nI3lGo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/TrueLayer.Payouts.Model.AccountIdentifier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TrueLayer.Payouts.Model.AccountIdentifier.html",
+          "hash": "g8BpxIai2dM8RLoaQqmIKOl/niRSPGwxnP/MuKGR6bg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/TrueLayer.Payouts.Model.Beneficiary.ExternalAccount.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TrueLayer.Payouts.Model.Beneficiary.ExternalAccount.html",
+          "hash": "S4sglQd8i0yDXYeVddNqAWSMhS5EYCn2HXeVttf89BY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/TrueLayer.Payouts.Model.Beneficiary.PaymentSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TrueLayer.Payouts.Model.Beneficiary.PaymentSource.html",
+          "hash": "qBB8sGIt/bpEIBJkbZlYbDp76dfDyi8q8VLZrCeYZGQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/TrueLayer.Payouts.Model.Beneficiary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TrueLayer.Payouts.Model.Beneficiary.html",
+          "hash": "FJIHB6FgBESWebMKFBVPaMp/KAtb3uSas3qrrlBE02A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/TrueLayer.Payouts.Model.CreatePayoutRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TrueLayer.Payouts.Model.CreatePayoutRequest.html",
+          "hash": "oYh48TEqGPL0ov+wcLQFuqVtIbKexfd2Vs6bVAG/XEw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/TrueLayer.Payouts.Model.CreatePayoutResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TrueLayer.Payouts.Model.CreatePayoutResponse.html",
+          "hash": "see99vJ80Aj4Rldkz5gy/nDEHFbX2rUK6QFP/kwWnp4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/TrueLayer.Payouts.Model.GetPayoutsResponse.Authorized.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TrueLayer.Payouts.Model.GetPayoutsResponse.Authorized.html",
+          "hash": "CyuV5AV6evUPdFixGUTxrtTc2/XnNTe/bmxXNAkcOGA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/TrueLayer.Payouts.Model.GetPayoutsResponse.Failed.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TrueLayer.Payouts.Model.GetPayoutsResponse.Failed.html",
+          "hash": "owEN8DQt4EfxjCBpDRRYlP6nETyOrTLiBUGcGNVshg0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/TrueLayer.Payouts.Model.GetPayoutsResponse.PayoutDetails.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TrueLayer.Payouts.Model.GetPayoutsResponse.PayoutDetails.html",
+          "hash": "goIcDYIBRxbF1bL4nwGlOmbxQfHCb0wkFXHrzQ86nJA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/TrueLayer.Payouts.Model.GetPayoutsResponse.Pending.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TrueLayer.Payouts.Model.GetPayoutsResponse.Pending.html",
+          "hash": "IcMX9n7n6UTPF6Gi3fX4LPn8LKjt12sTQCtndBaNHBs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/TrueLayer.Payouts.Model.GetPayoutsResponse.Successful.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TrueLayer.Payouts.Model.GetPayoutsResponse.Successful.html",
+          "hash": "1cFgm1mt+TozZtVlWcuFBH993tsI6Hc2VuCAMNRw04Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/TrueLayer.Payouts.Model.GetPayoutsResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TrueLayer.Payouts.Model.GetPayoutsResponse.html",
+          "hash": "iCgXX6mWfUzx8E9Cmt+QfbXkNDojNO2hMX3iM26pbCc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/TrueLayer.Payouts.Model.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TrueLayer.Payouts.Model.html",
+          "hash": "lfRSQLzBhkiS+a/e7dw/eXbR7WRovQlFGLeyzFJ2hCY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/TrueLayer.Payouts.PayoutsOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TrueLayer.Payouts.PayoutsOptions.html",
+          "hash": "oc73rBOMzOdDPnu5dFjb/JdtSoWEHxZN+CY3LdydMok="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/TrueLayer.Payouts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TrueLayer.Payouts.html",
+          "hash": "fF6hn5x98lHdmo3GKMdE1DmS4k9q68dWBPfa+upNuFU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/TrueLayer.ProblemDetails.yml",
       "output": {
         ".html": {
@@ -713,7 +941,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TrueLayer.TrueLayerOptions.html",
-          "hash": "b3mpOHBCaPNut7WJgrAGH5y0QYXIyMrCeLh0/d/TSYk="
+          "hash": "B97oz2dXQFo1LlOqQySGhq4ltWVbsUe7TomMA21DgV8="
         }
       },
       "is_incremental": false,
@@ -737,7 +965,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "ArCtGgAqJ5fMOXLVTIP2yuhsE3CNdvIWFwwB6vXCchA="
+          "hash": "BDR/ArkkC3T4ZqGcZeL7BeZdpi2dK5CZusBkm/wB4eE="
         }
       },
       "is_incremental": false,
@@ -776,7 +1004,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 58,
+          "total_file_count": 77,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
