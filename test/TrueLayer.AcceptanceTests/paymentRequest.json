@@ -1,0 +1,21 @@
+{
+  "amount_in_minor": 1,
+  "currency": "GBP",
+  "payment_method": {
+    "type": "bank_transfer",
+    "provider_selection": {
+      "type": "user_selected"
+    },
+    "beneficiary": {
+      "type": "merchant_account",
+      "name": "Merchant Account name",
+      "reference": "RefTest",
+      "merchant_account_id": "632feb3a-685a-4c42-9201-35fd54a2647d"
+    }
+  },
+  "user": {
+    "id": "5416d497-f607-4f0f-8056-94bfbc24c8f5",
+    "name": "Madhulika Mitra",
+    "email": "madhulika.mitra@truelayer.com"
+  }
+}
