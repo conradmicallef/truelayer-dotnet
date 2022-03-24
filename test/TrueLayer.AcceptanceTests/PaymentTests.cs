@@ -21,6 +21,7 @@ namespace TrueLayer.AcceptanceTests
         {
             CreatePaymentRequest paymentRequest = CreatePaymentRequest();
 
+
             var response = await _fixture.Client.Payments.CreatePayment(
                 paymentRequest, idempotencyKey: Guid.NewGuid().ToString());
 

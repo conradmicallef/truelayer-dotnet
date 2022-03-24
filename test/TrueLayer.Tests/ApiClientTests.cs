@@ -232,7 +232,7 @@ WS1/11+TH1x/lgKckAws6sAzJLPtCUZLV4IZTb6ENg==
                 idempotencyKey: idempotencyKey);
         }
 
-        public record UserAgentResponse(string Value);
+       // public record UserAgentResponse(string Value);
 
         private static void AssertSame(TestResponse? response, TestResponse expected)
         {

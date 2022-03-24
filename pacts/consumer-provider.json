@@ -1,0 +1,65 @@
+{
+  "consumer": {
+    "name": "Consumer"
+  },
+  "provider": {
+    "name": "Provider"
+  },
+  "interactions": [
+    {
+      "description": "A valid POST request for posting a payment request",
+      "providerState": "There is valid data",
+      "request": {
+        "method": "post",
+        "path": "/payments",
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "body": {
+          "amount_in_minor": 1,
+          "currency": "GBP",
+          "payment_method": {
+            "type": "bank_transfer",
+            "provider_selection": {
+              "type": "user_selected"
+            },
+            "beneficiary": {
+              "type": "merchant_account",
+              "name": "Merchant Account name",
+              "reference": "RefTest",
+              "merchant_account_id": "632feb3a-685a-4c42-9201-35fd54a2647d"
+            }
+          },
+          "user": {
+            "id": "5416d497-f607-4f0f-8056-94bfbc24c8f5",
+            "name": "Madhulika Mitra",
+            "email": "madhulika.mitra@truelayer.com"
+          }
+        }
+      },
+      "response": {
+        "status": 201,
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "body": {
+          "id": "ba09e08e-7df8-4665-8b7e-c0577e4ce8b5",
+          "user": {
+            "id": "d5ee21ab-e468-4443-a23b-b1d38b4e2334"
+          },
+          "resource_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6InBheW1lbnQiLCJjbGllbnRfaWQiOiJzYW5kYm94LXRydWVsYXllci01ZDhjNDEiLCJqdGkiOiJiYTA5ZTA4ZS03ZGY4LTQ2NjUtOGI3ZS1jMDU3N2U0Y2U4YjUiLCJuYmYiOjE2NDc0MzM1MDQsImV4cCI6MTY0NzQzNDQwNCwiaXNzIjoiaHR0cHM6Ly9hcGkudHJ1ZWxheWVyLXNhbmRib3guY29tIiwiYXVkIjoiaHR0cHM6Ly9hcGkudHJ1ZWxheWVyLXNhbmRib3guY29tIn0.NGJLFZSUJN80QB38JFceTNQiPSSV0iZ-p9OgiDISLnc"
+        },
+        "matchingRules": {
+          "$.body": {
+            "match": "type"
+          }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
