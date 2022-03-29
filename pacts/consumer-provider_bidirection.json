@@ -1,0 +1,70 @@
+{
+  "consumer": {
+    "name": "pactflow-truelayer-consumer-dotnet"
+  },
+  "provider": {
+    "name": "pactflow-truelayer-provider-dotnet"
+  },
+  "interactions": [
+    {
+      "description": "A valid POST request for posting a payment request",
+      "providerState": "There is valid data",
+      "request": {
+        "method": "post",
+        "path": "/payments",
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8",
+          "Idempotency-Key": "6b3b8a0b-2bff-4e94-a7d4-1652d7e7fb00",
+          "tl-signature": "eyJhbGciOiJFUzUxMiIsImtpZCI6IjUwY2JkZWIwLWZkODAtNGNiOC05MjI0LTkxYTQ2NTI2Yjk2MCIsInRsX3ZlcnNpb24iOiIyIiwidGxfaGVhZGVycyI6IklkZW1wb3RlbmN5LUtleSJ9..AJ8ITa4vOwHBO_WHizERjRzNmtvFG3vZcBd0v87ZHwM1ZV6MsAned2ynoX-ztYfTImpBzHpMm1hmLhCQYWorpJnsAXMje64AD6fIQ8lfyxHVkw6wFeXCY-fPHZHOdDWnn5qQseRzVxEheXwrXXvaW3j_wTaW3ZKu0yZwxIgIr-3dm5HT",
+          "authorization": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjE0NTk4OUIwNTdDOUMzMzg0MDc4MDBBOEJBNkNCOUZFQjMzRTk1MTBSUzI1NiIsInR5cCI6ImF0K2p3dCIsIng1dCI6IkZGbUpzRmZKd3poQWVBQ291bXk1X3JNLWxSQSJ9.eyJuYmYiOjE2NDgyMDk5MjMsImV4cCI6MTY0ODIxMzUyMywiaXNzIjoiaHR0cHM6Ly9hdXRoLnRydWVsYXllci1zYW5kYm94LmNvbSIsImF1ZCI6InBheW1lbnRzX2FwaSIsImNsaWVudF9pZCI6InNhbmRib3gtdHJ1ZWxheWVyLTVkOGM0MSIsImp0aSI6IkMxQkU1MEE5MkI0MzU5NkVCOTg3QjI4NEMzM0U3MDUyIiwiaWF0IjoxNjQ4MjA5OTIzLCJzY29wZSI6WyJwYXltZW50cyJdfQ.uZsVIqPuus99q0pkpaAPEvsbxXoDWqgWCGYS0_gUaUbyk0Ekqai3cDVbudRzeRXXWfqNKcXNsG3sPLCw9RGfTvuvtnyTib_PCxqR2fVmOU4Ac596WhCNuxklAalaTeCNk9szsbVEFBZOFxSg4vdnNLGaQ-3U1YvWxl6_p5TOe2J62Z6EwZdHDr42ex0_6yaTYdoXnjOPSGFGV_xNRz6SRMRhRmN8UCVER-9O6vSNuN-XuQUySXYqNSsPR-9VXrCYvDHmG3h5E_Wtk11LW2VQqw5XedOocOWZm3aSgRgmAQ3GOoscY8yadSbMtuO03RXB_fqRzEKUKBTD2ooKOcH67w"
+        },
+        "body": {
+          "amount_in_minor": 1,
+          "currency": "GBP",
+          "payment_method": {
+            "type": "bank_transfer",
+            "provider_selection": {
+              "type": "user_selected"
+            },
+            "beneficiary": {
+              "type": "merchant_account",
+              "name": "Merchant Account name",
+              "reference": "RefTest",
+              "merchant_account_id": "632feb3a-685a-4c42-9201-35fd54a2647d"
+            }
+          },
+          "user": {
+            "id": "5416d497-f607-4f0f-8056-94bfbc24c8f5",
+            "name": "Madhulika Mitra",
+            "email": "madhulika.mitra@truelayer.com"
+          }
+        }
+      },
+      "response": {
+        "status": 201,
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "body": {
+          "id": "ba09e08e-7df8-4665-8b7e-c0577e4ce8b5",
+          "user": {
+            "id": "d5ee21ab-e468-4443-a23b-b1d38b4e2334"
+          },
+          "resource_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6InBheW1lbnQiLCJjbGllbnRfaWQiOiJzYW5kYm94LXRydWVsYXllci01ZDhjNDEiLCJqdGkiOiJiYTA5ZTA4ZS03ZGY4LTQ2NjUtOGI3ZS1jMDU3N2U0Y2U4YjUiLCJuYmYiOjE2NDc0MzM1MDQsImV4cCI6MTY0NzQzNDQwNCwiaXNzIjoiaHR0cHM6Ly9hcGkudHJ1ZWxheWVyLXNhbmRib3guY29tIiwiYXVkIjoiaHR0cHM6Ly9hcGkudHJ1ZWxheWVyLXNhbmRib3guY29tIn0.NGJLFZSUJN80QB38JFceTNQiPSSV0iZ-p9OgiDISLnc"
+        },
+        "matchingRules": {
+          "$.body": {
+            "match": "type"
+          }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "3.0.0"
+    }
+  }
+}
+
+
