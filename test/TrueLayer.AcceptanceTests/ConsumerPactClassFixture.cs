@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using PactNet;
 using PactNet.Mocks.MockHttpService;
 
@@ -42,17 +43,23 @@ namespace TrueLayer.AcceptanceTests
 
         protected virtual void Dispose(bool disposing)
         {
+
+            String PACT_BROKER_BASEURL = Environment.GetEnvironmentVariable("PACT_BROKER_BASE_URL",EnvironmentVariableTarget.Process)!;
+            String PACT_BROKER_TOKEN = Environment.GetEnvironmentVariable("PACT_BROKER_TOKEN",EnvironmentVariableTarget.Process)!;
+
             if (!disposedValue)
             {
                 if (disposing)
                 {
                     // This will save the pact file once finished.
                     PactBuilder.Build();
-                    var pactPublisher = new PactPublisher("https://truelayer.pactflow.io",
-                        new PactUriOptions("EFGs1LKw5awRrUoqmAWo-w"));
+                    var pactPublisher = new PactPublisher(PACT_BROKER_BASEURL,
+                        new PactUriOptions(PACT_BROKER_TOKEN));
                     pactPublisher.PublishToBroker(
                         "../../../../../pacts/consumer-provider.json",
-                        "1.0.1");
+                        "1.0.2"
+                      , new []{"stage","pactflowTest","updatedModel"}
+                    );
 
                 }
 
