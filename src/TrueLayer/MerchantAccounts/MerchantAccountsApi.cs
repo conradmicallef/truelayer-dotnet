@@ -21,9 +21,9 @@ namespace TrueLayer.MerchantAccounts
 
             options.Payments.NotNull(nameof(options.Payments))!.Validate();
 
-            _baseUri = options.Payments.Uri is not null
+            _baseUri = options?.Payments?.Uri is not null
                 ? new Uri(options.Payments.Uri, "merchant-accounts")
-                : new Uri(options.UseSandbox ?? true ? SandboxUrl : ProdUrl);
+                : new Uri(options?.UseSandbox ?? true ? SandboxUrl : ProdUrl);
         }
 
         /// <inheritdoc />
@@ -55,7 +55,11 @@ namespace TrueLayer.MerchantAccounts
                 return new(authResponse.StatusCode, authResponse.TraceId);
             }
 
+#if NETSTANDARD2_0
+            var getUri = new Uri(_baseUri.AbsoluteUri.EndsWith("/") ? _baseUri + id : _baseUri + "/" + id);
+#else
             var getUri = new Uri(_baseUri.AbsoluteUri.EndsWith('/') ? _baseUri + id : _baseUri + "/" + id);
+#endif
             return await _apiClient.GetAsync<MerchantAccount>(
                 getUri,
                 authResponse.Data!.AccessToken,

@@ -22,7 +22,11 @@ namespace TrueLayer.Serialization
         public Dictionary<string, Type> TypeMap { get; }
         public string? Discriminator { get; }
 
-        public static bool IsValidType(Type baseType, [NotNullWhen(true)] out IEnumerable<JsonKnownTypeAttribute>? attributes)
+        public static bool IsValidType(Type baseType,
+#if NETSTANDARD2_1_OR_GREATER || NET5_0_OR_GREATER
+          [NotNullWhen(true)]
+#endif
+        out IEnumerable<JsonKnownTypeAttribute>? attributes)
         {
             attributes = default;
 
@@ -34,13 +38,20 @@ namespace TrueLayer.Serialization
             return attributes.Any();
         }
 
-        public static bool TryCreate(Type baseType, [NotNullWhen(true)] out PolymorphicTypeDescriptor? descriptor)
+        public static bool TryCreate(Type baseType,
+#if NETSTANDARD2_1_OR_GREATER || NET5_0_OR_GREATER
+          [NotNullWhen(true)]
+#endif
+            out PolymorphicTypeDescriptor? descriptor)
         {
             descriptor = default;
 
             if (!IsValidType(baseType, out var attributes))
                 return false;
-
+#if NETSTANDARD2_0
+            if (attributes == null)
+                return false;
+#endif
             var typeMap = new Dictionary<string, Type>();
 
             foreach (var attr in attributes)

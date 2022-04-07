@@ -38,9 +38,9 @@ namespace TrueLayer.Payments
 
             options.Payments.NotNull(nameof(options.Payments))!.Validate();
 
-            _baseUri = options.Payments.Uri is not null
+            _baseUri = options?.Payments?.Uri is not null
                 ? new Uri(options.Payments.Uri, "payments/")
-                : new Uri((options.UseSandbox ?? true) ? SandboxUrl : ProdUrl);
+                : new Uri((options?.UseSandbox ?? true) ? SandboxUrl : ProdUrl);
         }
 
         /// <inheritdoc />

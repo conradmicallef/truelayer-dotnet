@@ -23,7 +23,11 @@ namespace TrueLayer
         /// </summary>
         public Dictionary<string, (Type FieldType, Delegate Factory)> TypeFactories { get; }
 
-        public static bool TryCreate(Type oneOfType, [NotNullWhen(true)] out OneOfTypeDescriptor? factory)
+        public static bool TryCreate(Type oneOfType,
+#if NETSTANDARD2_1_OR_GREATER || NET5_0_OR_GREATER
+          [NotNullWhen(true)]
+#endif
+        out OneOfTypeDescriptor? factory)
         {
             factory = default;
 

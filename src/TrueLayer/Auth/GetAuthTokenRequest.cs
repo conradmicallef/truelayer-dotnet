@@ -13,7 +13,11 @@ namespace TrueLayer.Auth
         {
             if (scopes is { Length: > 0 })
             {
+#if NETSTANDARD2_0
+                Scope=string.Join(" ",scopes);
+#else
                 Scope = string.Join(' ', scopes);
+#endif
                 IsScoped = true;
             }
         }

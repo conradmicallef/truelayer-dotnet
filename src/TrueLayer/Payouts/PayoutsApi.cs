@@ -34,8 +34,8 @@ namespace TrueLayer.Payouts
 
             options.Payments.NotNull(nameof(options.Payments))!.Validate();
 
-            string payoutsApiUrl = (options.UseSandbox ?? true) ? SandboxUrl : ProdUrl;
-            _baseUri = options.Payments.Uri is not null
+            string payoutsApiUrl = (options?.UseSandbox ?? true) ? SandboxUrl : ProdUrl;
+            _baseUri = options?.Payments?.Uri is not null
                 ? new Uri(options.Payments.Uri, "payouts")
                 : new Uri(payoutsApiUrl);
         }

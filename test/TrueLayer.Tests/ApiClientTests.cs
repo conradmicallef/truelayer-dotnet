@@ -41,7 +41,7 @@ namespace TrueLayer.Sdk.Tests
             _httpMessageHandler
                 .Expect(HttpMethod.Get, "http://localhost/get-json")
                 .WithHeaders("Authorization", "Bearer access-token")
-                .Respond(HttpStatusCode.OK, MediaTypeNames.Application.Json, JsonSerializer.Serialize(_stub, SerializerOptions.Default));
+                .Respond(HttpStatusCode.OK, "application/json", JsonSerializer.Serialize(_stub, SerializerOptions.Default));
 
             TestResponse? response = await _apiClient.GetAsync<TestResponse>(
                 new Uri("http://localhost/get-json"),
@@ -63,7 +63,7 @@ namespace TrueLayer.Sdk.Tests
                 .Expect(HttpMethod.Post, "http://localhost/post-http-content")
                 .WithHeaders("Authorization", "Bearer access-token")
                 .WithContent(requestJson)
-                .Respond(HttpStatusCode.OK, MediaTypeNames.Application.Json, JsonSerializer.Serialize(_stub, SerializerOptions.Default));
+                .Respond(HttpStatusCode.OK, "application/json", JsonSerializer.Serialize(_stub, SerializerOptions.Default));
 
             TestResponse? response = await _apiClient.PostAsync<TestResponse>(
                 new Uri("http://localhost/post-http-content"),
@@ -88,7 +88,7 @@ namespace TrueLayer.Sdk.Tests
                 .Expect(HttpMethod.Post, "http://localhost/post-object")
                 .WithHeaders("Authorization", "Bearer access-token")
                 .WithContent(json)
-                .Respond(HttpStatusCode.OK, MediaTypeNames.Application.Json, JsonSerializer.Serialize(_stub, SerializerOptions.Default));
+                .Respond(HttpStatusCode.OK, "application/json", JsonSerializer.Serialize(_stub, SerializerOptions.Default));
 
             TestResponse? response = await _apiClient.PostAsync<TestResponse>(
                 new Uri("http://localhost/post-object"),
@@ -169,7 +169,7 @@ namespace TrueLayer.Sdk.Tests
             _httpMessageHandler
                 .Expect(HttpMethod.Get, "http://localhost/user-agent")
                 .WithHeaders("User-Agent", $"truelayer-dotnet/{ReflectionUtils.GetAssemblyVersion<ApiClient>()}")
-                .Respond(HttpStatusCode.OK, MediaTypeNames.Application.Json, "{}");
+                .Respond(HttpStatusCode.OK, "application/json", "{}");
 
             var response = await _apiClient.GetAsync<TestResponse>(new Uri("http://localhost/user-agent"));
             response.StatusCode.ShouldBe(HttpStatusCode.OK);
@@ -200,7 +200,7 @@ WS1/11+TH1x/lgKckAws6sAzJLPtCUZLV4IZTb6ENg==
                 .Expect(HttpMethod.Post, "http://localhost/signing")
                 .With(r => r.Headers.Contains(CustomHeaders.Signature))
                 .WithHeaders(CustomHeaders.IdempotencyKey, idempotencyKey)
-                .Respond(HttpStatusCode.OK, MediaTypeNames.Application.Json, "{}");
+                .Respond(HttpStatusCode.OK, "application/json", "{}");
 
             var response = await _apiClient.PostAsync<TestResponse>(
                 requestUri,
@@ -224,7 +224,7 @@ WS1/11+TH1x/lgKckAws6sAzJLPtCUZLV4IZTb6ENg==
                 .Expect(HttpMethod.Post, "http://localhost/no-signing")
                 .With(r => !r.Headers.Contains(CustomHeaders.Signature))
                 .WithHeaders(CustomHeaders.IdempotencyKey, idempotencyKey)
-                .Respond(HttpStatusCode.OK, MediaTypeNames.Application.Json, "{}");
+                .Respond(HttpStatusCode.OK, "application/json", "{}");
 
             var response = await _apiClient.PostAsync<TestResponse>(
                 requestUri,

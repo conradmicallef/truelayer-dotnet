@@ -21,9 +21,13 @@ namespace TrueLayer
         /// </code>
         /// </example>
         [DebuggerStepThrough]
-        public static string NotNullOrWhiteSpace([NotNull] this string? value, string name)
+        public static string NotNullOrWhiteSpace(
+#if NETSTANDARD2_1_OR_GREATER || NET5_0_OR_GREATER
+        [NotNull]
+#endif
+            this string? value, string name)
         {
-            if (string.IsNullOrWhiteSpace(value))
+            if (value==null || string.IsNullOrWhiteSpace(value))
             {
                 throw new ArgumentException("Value must be provided", name);
             }
@@ -72,13 +76,21 @@ namespace TrueLayer
         /// </code>
         /// </example>
         [DebuggerStepThrough]
-        public static T NotNull<T>([NotNull] this T value, string name)
+        public static T NotNull<T>(
+            #if NETSTANDARD2_1_OR_GREATER || NET5_0_OR_GREATER
+        [NotNull]
+#endif
+            this T value, string name)
         {
             return value ?? throw new ArgumentNullException(name);
         }
 
         [DebuggerStepThrough]
-        public static T GreaterThan<T>([NotNull] this T value, T greaterThan, string paramName) where T : IComparable
+        public static T GreaterThan<T>(
+#if NETSTANDARD2_1_OR_GREATER || NET5_0_OR_GREATER
+        [NotNull]
+#endif
+        this T value, T greaterThan, string paramName) where T : IComparable
         {
             if (value.CompareTo(greaterThan) <= 0)
             {

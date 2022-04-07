@@ -160,7 +160,13 @@ namespace TrueLayer
                         idempotencyKey
                     );
 
-                    httpContent = new StringContent(json, Encoding.UTF8, MediaTypeNames.Application.Json);
+                    httpContent = new StringContent(json, Encoding.UTF8,
+#if NETSTANDARD2_1_OR_GREATER || NET5_0_OR_GREATER
+                        MediaTypeNames.Application.Json
+#else
+                        "application/json"
+#endif
+                        );
                 }
                 else // Otherwise we can serialize directly to stream for .NET 5.0 onwards
                 {
@@ -169,7 +175,13 @@ namespace TrueLayer
 #else
                     // for older versions of .NET we'll have to fall back to using StringContent
                     string json = JsonSerializer.Serialize(request, request.GetType(), SerializerOptions.Default);
-                    httpContent = new StringContent(json, Encoding.UTF8, MediaTypeNames.Application.Json);
+                    httpContent = new StringContent(json, Encoding.UTF8,
+#if NETSTANDARD2_1_OR_GREATER || NET5_0_OR_GREATER
+                        MediaTypeNames.Application.Json
+#else
+                        "application/json"
+# endif
+);
 #endif
                 }
             }

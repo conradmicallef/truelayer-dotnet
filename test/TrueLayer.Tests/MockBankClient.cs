@@ -29,10 +29,15 @@ namespace TrueLayer.AcceptanceTests
 
         private static (string AuthUrl, string AuthToken) ParseMockBankUrl(string redirectUrl)
         {
+#if NET48
+            string[] parts = redirectUrl.Split('/', '=', '#');
+            string authToken = parts[1];
+            string authId = parts[3];
+#else
             string[] parts = redirectUrl.Split('/', '=', '#');
             string authToken = parts[^1];
             string authId = parts[^3];
-
+#endif
             return ($"https://pay-mock-connect.truelayer-sandbox.com/api/single-immediate-payments/{authId}/action", authToken);
         }
 

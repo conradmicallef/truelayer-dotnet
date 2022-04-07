@@ -40,10 +40,16 @@ namespace TrueLayer
             key.ImportFromPem(privateKey);
 #else
             byte[] decodedPem = ReadPemContents(privateKey);
+#if NETSTANDARD2_0
+            throw new NotImplementedException();
+#else
             key.ImportECPrivateKey(decodedPem, out _);
 #endif
-
+#endif
+#if !NETSTANDARD2_0
             return key;
+#endif
+
         }
 
         /// <summary>
