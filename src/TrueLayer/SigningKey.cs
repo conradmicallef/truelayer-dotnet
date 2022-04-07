@@ -72,7 +72,7 @@ namespace TrueLayer
             var puk = (ECPublicKeyParameters)ask.Public;
             ECParameters par = new ECParameters
             {
-                Curve = ECCurve.NamedCurves.nistP521,
+                Curve = ECCurve.CreateFromValue(pk.PublicKeyParamSet.Id),
                 D = pk.D.ToByteArrayUnsigned(),
                 Q = new ECPoint
                 {
@@ -82,8 +82,7 @@ namespace TrueLayer
             };
             par.D = FixSize(par.D, par.Q.X.Length);
             par.Validate();
-            var key = ECDsaCng.Create();
-            key.ImportParameters(par);
+            var key = ECDsaCng.Create(par);
             return key;
         }
 #else
